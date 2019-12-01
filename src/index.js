@@ -10,12 +10,12 @@ import * as firebase from 'firebase'
 
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyBzGcaPx2uvbi30sbFowUIenmmBSeKN8KE",
-    authDomain: "planapp-372b1.firebaseapp.com",
-    databaseURL: "https://planapp-372b1.firebaseio.com",
-    projectId: "planapp-372b1",
-    storageBucket: "planapp-372b1.appspot.com",
-    messagingSenderId: "183415027394"
+    apiKey: "AIzaSyD3d6chD0m31ywIQBdZm1UO3dxZKoGiS_Y",
+    authDomain: "blackgame-e102d.firebaseapp.com",
+    databaseURL: "https://blackgame-e102d.firebaseio.com",
+    projectId: "blackgame-e102d",
+    storageBucket: "blackgame-e102d.appspot.com",
+    messagingSenderId: "325901267150"
   };
   firebase.initializeApp(config);
 
