@@ -16,10 +16,10 @@ class Bar extends Component {
       }
    }
     
-      signout(ev) {
+      signup(ev) {
         ev.preventDefault();      
             console.log("Sign out successful"),
-            browserHistory.push('/login')
+            browserHistory.push('/signup')
  }
  
     render() {
@@ -27,7 +27,7 @@ class Bar extends Component {
             <div>
                 <MuiThemeProvider>
                     <div>
-                        <AppBar title="Quiz App" style={style} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signout} />} />
+                        <AppBar title="The Pre-Game" style={style} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signup} />} />
                     </div>
                 </MuiThemeProvider>
                 {this.props.children}

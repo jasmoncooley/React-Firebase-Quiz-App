@@ -1,6 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import * as firebase from "firebase";
+// import email from "login";
 
 
 
@@ -21,6 +22,7 @@ class Quizes extends React.Component {
  }
 componentWillMount() {
     var don = [];
+
     firebase.database().ref('QuizDetail/' ).on('value', (data) => {
         let obj = data.val();
              for (var prop in obj){

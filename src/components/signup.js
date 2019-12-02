@@ -29,19 +29,22 @@ class Signup extends Component {
         const name = this.refs.name.getValue();
         const email = this.refs.txte.getValue();
         const pass = this.refs.pass.getValue();
-        console.log(name, email, pass)
+        console.log(name, email)
 
        
         firebase.auth().createUserWithEmailAndPassword(email, pass).then((result) => {
         let userId = firebase.auth().currentUser.uid;
             let userDetail = {
+                Questions:'',
+                // userid: firebase.auth().currentUser,
                 username: name,
                 useremail: email,
                 userpass: pass
             }
-             alert("Congratulations"+''+name)
+             alert("Congratulations"+' '+name)
             browserHistory.push('/login')
             firebase.database().ref('UserInfo/' + userId).set(userDetail)
+            firebase.database().ref('UserInfo/' + userId + "/Questions").set("number:0")
         })
             .catch(function (error) {
                 // Handle Errors here.
