@@ -238,6 +238,10 @@ componentWillMount() {
 render() {
         // console.log(this.state.TotalTime);
         return (
+            // <Link to="/Movies"><RaisedButton primary={true} ><span style={style}>Movies</span></RaisedButton></Link>
+            // <Link to="/Television"><RaisedButton primary={true} ><span style={style}>Television</span></RaisedButton></Link>
+            // <Link to="/Music"><RaisedButton primary={true} ><span style={style}>Music</span></RaisedButton></Link>
+
             <div>
             <MuiThemeProvider>
             <div>
@@ -247,6 +251,9 @@ render() {
             <span style={style}>{this.state.timer}</span>
 
             <h4 style={style2}>{this.state.Question}</h4>
+            <Link to="/Movies"><RaisedButton primary={true} ><span style={style}>Movies</span></RaisedButton></Link>
+            <Link to="/Television"><RaisedButton primary={true} ><span style={style}>Television</span></RaisedButton></Link>
+            <Link to="/Music"><RaisedButton primary={true} ><span style={style}>Music</span></RaisedButton></Link>
             <br />
             <br />
             <div ref="val">
@@ -289,6 +296,6 @@ render() {
             </div>
             </MuiThemeProvider>
             </div>
-            )
+        )
     }
 }
