@@ -15,7 +15,7 @@ class LoginSignup extends Component {
                         <div>
                             <YoutubePlayer
                                 videoId='48l92b0XxW4'
-                                playbackState='started'
+                                playbackState='unstarted'
                                 configuration={
                                     {
                                         showinfo: 0,
