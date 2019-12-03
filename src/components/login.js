@@ -18,7 +18,7 @@ const style1 = {
   
 };
 const style2 = {
-   color: "#FF00F2",
+   color: "000000",
   
 };
 
@@ -59,7 +59,7 @@ class Login extends Component {
             <h1 style={style1}>Login</h1>
             <TextField type="email" hintText="UserEmail" floatingLabelText="Email" ref="txte" /> <br />
             <TextField type="password" hintText="Password" floatingLabelText="Password" ref="pass" /> <br />
-            <br /><RaisedButton onClick={this.login} primary={true}><span style={style2}> Login </span></RaisedButton><br />
+            <br /><RaisedButton onClick={this.login} primary={false} backgroundColor='#FF00F2'><span style={style2}> Login </span></RaisedButton><br />
           </Paper>
         </center>
          

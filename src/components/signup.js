@@ -17,7 +17,7 @@ const style1 = {
   
 };
 const style2 = {
-   color: "#ff00f2",
+   color: "#000000",
   
 };
 class Signup extends Component {
@@ -64,7 +64,7 @@ class Signup extends Component {
                         <TextField type="text" hintText="Name" floatingLabelText="Full Name" ref="name" /> <br />
                         <TextField type="email" hintText="Email" floatingLabelText="E-mail" ref="txte" /> <br />
                         <TextField type="password"  hintText="Password" floatingLabelText="Password" ref="pass" /><br /><br />
-                        <RaisedButton primary={true} onClick={this.signup} ><span style={style2}> SIGN UP </span>  </RaisedButton>
+                        <RaisedButton primary={false} backgroundColor='#FF00F2' onClick={this.signup} ><span style={style2}> SIGN UP </span>  </RaisedButton>
                         
                     </Paper>
                 </div>
