@@ -14,7 +14,7 @@ class LoginSignup extends Component {
                 <MuiThemeProvider>
                     <center>
                         <div>
-                            <h1> <font color = "#ff00f2">Welcome to the Pre-Game!</font> </h1>
+                            <h1> <font color = "#FF00F2">Welcome to the Pre-Game!</font> </h1>
                             <Link to="/login"><RaisedButton type="submit" primary={false}>Log in</RaisedButton></Link>
                             <Link to="/signup"><RaisedButton type="submit" primary={true} style={{ margin: 12 }}>Sign Up</RaisedButton></Link>
                         </div>
