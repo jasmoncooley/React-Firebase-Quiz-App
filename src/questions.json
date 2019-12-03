@@ -1,0 +1,41 @@
+{
+    "Questions":{
+        "Movies":{
+            "Quiz1":{
+                "Question1":{
+                    "Question":"What",
+                    "Answer":"",
+                    "Answer2":"",
+                    "Answer3":"",
+                    "Answer4":"",
+                    "Correct Answer":""
+                }
+            }
+        },
+        "Music":{
+            "Quiz1":{
+                "Question1":{
+                    "Question":"What",
+                    "Answer":"",
+                    "Answer2":"",
+                    "Answer3":"",
+                    "Answer4":"",
+                    "Correct Answer":""
+                }
+            }
+        },
+        "TV":{
+            "Quiz1":{
+                "Question1":{
+                    "Question":"What",
+                    "Answer":"",
+                    "Answer2":"",
+                    "Answer3":"",
+                    "Answer4":"",
+                    "Correct Answer":""
+                }
+            }
+        }
+
+
+}
