@@ -1,6 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import * as firebase from "firebase";
+import { Link } from 'react-router';
 import { RaisedButton } from 'material-ui';
 import Paper from 'material-ui/Paper';
 import { browserHistory } from 'react-router';
@@ -238,6 +239,10 @@ componentWillMount() {
 render() {
         // console.log(this.state.TotalTime);
         return (
+            // <Link to="/Movies"><RaisedButton primary={true} ><span style={style}>Movies</span></RaisedButton></Link>
+            // <Link to="/Television"><RaisedButton primary={true} ><span style={style}>Television</span></RaisedButton></Link>
+            // <Link to="/Music"><RaisedButton primary={true} ><span style={style}>Music</span></RaisedButton></Link>
+
             <div>
             <MuiThemeProvider>
             <div>
@@ -247,6 +252,7 @@ render() {
             <span style={style}>{this.state.timer}</span>
 
             <h4 style={style2}>{this.state.Question}</h4>
+
             <br />
             <br />
             <div ref="val">
@@ -281,6 +287,10 @@ render() {
 
             </div>
             <FloatingActionButton style={stylee} onClick={this.loadQuestion}>
+
+            <Link to="/Movies"><RaisedButton primary={true} ><span style={style}>Movies</span></RaisedButton></Link>
+            <Link to="/Television"><RaisedButton primary={true} ><span style={style}>Television</span></RaisedButton></Link>
+            <Link to="/Music"><RaisedButton primary={true} ><span style={style}>Music</span></RaisedButton></Link>
             <ContentAdd />
             </FloatingActionButton>
             </Paper>
@@ -289,6 +299,6 @@ render() {
             </div>
             </MuiThemeProvider>
             </div>
-            )
+        )
     }
 }

@@ -95,8 +95,8 @@ export default class CreatQuiz extends React.Component {
             op2: op2,
             op3: op3,
             op4: op4,
-            Answer: Answer
-            video: video
+            Answer: Answer,
+            Video: video
 
         }
        if(Question === "" || op1 === "" || op2 === "" || op3 ==="" || op4 === "" || Answer === ""){
