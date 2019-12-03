@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/FlatButton';
 import { browserHistory } from 'react-router';
 
 const style ={
-  background:"#e75480"
+  background:"#36ABCB"
 }
 class Bar extends Component {
     constructor(props) {
@@ -16,10 +16,10 @@ class Bar extends Component {
       }
    }
     
-      signup(ev) {
+      signout(ev) {
         ev.preventDefault();      
             console.log("Sign out successful"),
-            browserHistory.push('/signup')
+            browserHistory.push('/login')
  }
  
     render() {
@@ -27,7 +27,7 @@ class Bar extends Component {
             <div>
                 <MuiThemeProvider>
                     <div>
-                        <AppBar title="The Pre-Game" style={style} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signup} />} />
+                        <AppBar title="Quiz App" style={style} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signout} />} />
                     </div>
                 </MuiThemeProvider>
                 {this.props.children}

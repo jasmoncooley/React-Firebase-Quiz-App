@@ -1,20 +1,19 @@
+
 import React from 'react';
 import { Link } from 'react-router'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { RaisedButton } from 'material-ui';
 import { browserHistory } from 'react-router'
 import * as firebase from "firebase";
-import {email} from './login.js'
 
 
 const style = {
-   color: "rgb(0, 188, 212)",
+   color: "white",
   
 };
 class Start extends React.Component {
     constructor(props) {
         super(props)
-        var user =firebase.auth().currentUser;
         this.state = {
          don: {},
          
@@ -24,11 +23,8 @@ class Start extends React.Component {
 
      }
         this.next = this.next.bind(this);
-        
-        console.log(email);
     }
     componentWillMount() {
-       
         firebase.database().ref('QuizDetail/' ).on('value', (data) => {
         let obj = data.val();
             console.log(obj)
