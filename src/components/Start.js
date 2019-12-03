@@ -8,7 +8,7 @@ import {email} from './login.js'
 
 
 const style = {
-   color: "pink",
+   color: "rgb(0, 188, 212)",
   
 };
 class Start extends React.Component {
