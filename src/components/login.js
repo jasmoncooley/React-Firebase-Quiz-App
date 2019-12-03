@@ -17,7 +17,7 @@ const style1 = {
   
 };
 const style2 = {
-   color: "pink",
+   color: "rgb(255, 0, 230)",
   
 };
 const email = '';
