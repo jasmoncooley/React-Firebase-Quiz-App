@@ -34,7 +34,6 @@ class Start extends React.Component {
           
     })
     }
-     
 
      next(){
         if(this.state.don === null){
@@ -57,12 +56,8 @@ class Start extends React.Component {
 
                             <h1 ref="val">Quiz App</h1>
 
-                            <Link to="/CreateQuiz"><RaisedButton primary={true} ><span style={style}>Create Quiz</span></RaisedButton></Link>
+                            <Link to="/CreatQuiz"><RaisedButton primary={true} ><span style={style}>Create Quiz</span></RaisedButton></Link>
                             <RaisedButton onClick={this.next} type="submit" primary={true} style={{ margin: 12 }}><span style={style}>Attempt Quiz</span></RaisedButton>
-
-                            <Link to="/Movies"><RaisedButton primary={true} ><span style={style}>Movies</span></RaisedButton></Link>
-                            <RaisedButton onClick={this.next} type="submit" primary={true} style={{ margin: 12 }}><span style={style}>Movies</span></RaisedButton>
-
 
                         </div>
                     </center>
