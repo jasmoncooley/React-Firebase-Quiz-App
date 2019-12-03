@@ -5,7 +5,7 @@ import FlatButton from 'material-ui/FlatButton';
 import { browserHistory } from 'react-router';
 
 const style ={
-  background:"#36ABCB"
+  background:"#FF00F2"
 }
 class Bar extends Component {
     constructor(props) {
