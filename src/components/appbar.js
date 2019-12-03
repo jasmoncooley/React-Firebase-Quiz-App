@@ -27,7 +27,7 @@ class Bar extends Component {
             <div>
                 <MuiThemeProvider>
                     <div>
-                        <AppBar title="Quiz App" style={style} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signout} />} />
+                        <AppBar title="The Pre-Game" style={style} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signout} />} />
                     </div>
                 </MuiThemeProvider>
                 {this.props.children}

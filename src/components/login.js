@@ -6,6 +6,7 @@ import * as firebase from 'firebase'
 
 
 const style = {
+  //color: "#ff00f2",
   height: 300,
   width: 300,
   margin: "20px 0px 20px 0px",
@@ -13,11 +14,11 @@ const style = {
   display: 'inline-block',
 };
 const style1 = {
-   color: "rgb(0, 188, 212)",
+   color: "#FF00F2",
   
 };
 const style2 = {
-   color: "white",
+   color: "#FF00F2",
   
 };
 

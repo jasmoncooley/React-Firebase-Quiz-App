@@ -5,17 +5,19 @@ import { RaisedButton, TextField } from 'material-ui';
 import Paper from 'material-ui/Paper';
 
 const style = {
+    color: "#ff00f2",
     height: 400,
     width: 320,
     padding: 20,
      margin: "20px 0px 20px 0px",
+    
 };
 const style1 = {
-   color: "rgb(0, 188, 212)",
+   color: "r#ff00f2",
   
 };
 const style2 = {
-   color: "white",
+   color: "#ff00f2",
   
 };
 class Signup extends Component {
@@ -57,12 +59,12 @@ class Signup extends Component {
                 <div>
                    
                     <Paper style={style} zDepth={3} >
-                     <h1  style={style1}>Signup</h1>
+                     <h1 style={style1}>Sign Up</h1>
 
                         <TextField type="text" hintText="Name" floatingLabelText="Full Name" ref="name" /> <br />
                         <TextField type="email" hintText="Email" floatingLabelText="E-mail" ref="txte" /> <br />
                         <TextField type="password"  hintText="Password" floatingLabelText="Password" ref="pass" /><br /><br />
-                        <RaisedButton primary={true} onClick={this.signup} ><span style={style2}> SIGNUP </span>  </RaisedButton>
+                        <RaisedButton primary={true} onClick={this.signup} ><span style={style2}> SIGN UP </span>  </RaisedButton>
                         
                     </Paper>
                 </div>
