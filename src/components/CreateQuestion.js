@@ -4,6 +4,7 @@ import { browserHistory } from 'react-router'
 import * as firebase from "firebase";
 import { RaisedButton, TextField } from 'material-ui';
 import Paper from 'material-ui/Paper';
+import {QuizDetail} from './CreatQuiz.js'
 
 const names = [
   'Oliver Hansen',
@@ -66,7 +67,9 @@ export default class CreatQuiz extends React.Component {
             alert("Please Fill Required Fields")
         }
         else{
-        firebase.database().ref('QuizQuestion').push(QuizQuestion)
+        // firebase.database().ref('QuizQuestion').push(QuizQuestion)
+        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/"+QuizDetail.Title+"/Questions").update({QuizQuestion});
+
         console.log(QuizQuestion)
         browserHistory.push('/Start')
     }

@@ -210,7 +210,7 @@ componentWillMount() {
                 ques.push(obj[prop]);
                 // console.log(don);
             }
-            // console.log(ques[0].Question)
+            console.log(ques[1].Question);
             let Question = ques[0].Question;
             let op1 = ques[0].op1;
             let op2 = ques[0].op2;
