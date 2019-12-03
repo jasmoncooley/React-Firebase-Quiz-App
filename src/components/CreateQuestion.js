@@ -126,7 +126,7 @@ export default class CreatQuiz extends React.Component {
                                 <TextField type="text" hintText="Option 3" floatingLabelText="Option 3" ref="op3" /><br />
                                 <TextField type="text" hintText="Option 4" floatingLabelText="Option 4" ref="op4" /><br /><br />
                                 <TextField type="text" hintText="Answer" floatingLabelText="Answer" ref="Answer" /><br /><br />
-                                <h2> font= "22px" Get the Youtube URL for your song or movie and only return the ID. For example, https://www.youtube.com/watch?v=NLZRYQMLDW4. The ID will be NLZRYQMLDW4</h2>
+                                <h2> Get the Youtube URL for your song or movie and only return the ID. For example, https://www.youtube.com/watch?v=NLZRYQMLDW4. The ID will be NLZRYQMLDW4</h2>
                                 <TextField type="text" hintText="Youtube Song/Video ID" floatingLabelText="Youtube ID" ref="video" /><br /><br />
                                 <RaisedButton primary={true} onClick={this.next1} style={style1} ><span style={style2}> Add More+ </span>  </RaisedButton>
                                 <RaisedButton primary={true} onClick={this.next} style={style1} ><span style={style2}> Save Quiz </span>  </RaisedButton>
