@@ -34,16 +34,6 @@ class Start extends React.Component {
           
     })
     }
-     
-    next1(){
-        if(this.state.don === null){
-            browserHistory.push('/Quizes')
-        }
-        else{
-            browserHistory.push('/Movies')
-        }
-    
-       }
 
      next(){
         if(this.state.don === null){
