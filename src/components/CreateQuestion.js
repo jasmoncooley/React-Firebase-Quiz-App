@@ -20,7 +20,7 @@ const names = [
 ];
 
 const style = {
-    height: 650,
+    height: 850,
     width: 320,
     padding: 20,
     margin: "20px 0px 20px 0px",
@@ -33,6 +33,9 @@ const style2 = {
     color: "white",
 
 };
+const style3 = {
+    size:"1px"
+}
 export default class CreatQuiz extends React.Component {
     constructor(props) {
         super(props)
@@ -53,6 +56,7 @@ export default class CreatQuiz extends React.Component {
         const op3 = this.refs.op3.getValue();
         const op4 = this.refs.op4.getValue();
         const Answer = this.refs.Answer.getValue();
+
 
         let QuizQuestion = {
             Question: Question,
@@ -83,6 +87,7 @@ export default class CreatQuiz extends React.Component {
         const op3 = this.refs.op3.getValue();
         const op4 = this.refs.op4.getValue();
         const Answer = this.refs.Answer.getValue();
+        const video = this.refs.video.getValue();
 
         let QuizQuestion = {
             Question: Question,
@@ -90,7 +95,8 @@ export default class CreatQuiz extends React.Component {
             op2: op2,
             op3: op3,
             op4: op4,
-            Answer: Answer
+            Answer: Answer,
+            Video: video
 
         }
        if(Question === "" || op1 === "" || op2 === "" || op3 ==="" || op4 === "" || Answer === ""){
@@ -126,7 +132,7 @@ export default class CreatQuiz extends React.Component {
                                 <TextField type="text" hintText="Option 3" floatingLabelText="Option 3" ref="op3" /><br />
                                 <TextField type="text" hintText="Option 4" floatingLabelText="Option 4" ref="op4" /><br /><br />
                                 <TextField type="text" hintText="Answer" floatingLabelText="Answer" ref="Answer" /><br /><br />
-                                {/* <h2> font= "22px" Get the Youtube URL for your song or movie and only return the ID. For example, https://www.youtube.com/watch?v=NLZRYQMLDW4. The ID will be NLZRYQMLDW4</h2> */}
+                                <h2><font size="1">Get the Youtube URL for your song or movie and only return the ID. For example, https://www.youtube.com/watch?v=NLZRYQMLDW4. The ID will be NLZRYQMLDW4</font> </h2> 
                                 <TextField type="text" hintText="Youtube Song/Video ID" floatingLabelText="Youtube ID" ref="video" /><br /><br />
                                 <RaisedButton primary={true} onClick={this.next1} style={style1} ><span style={style2}> Add More+ </span>  </RaisedButton>
                                 <RaisedButton primary={true} onClick={this.next} style={style1} ><span style={style2}> Save Quiz </span>  </RaisedButton>

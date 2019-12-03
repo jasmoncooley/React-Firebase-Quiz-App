@@ -3,24 +3,95 @@
         "Movies":{
             "Quiz1":{
                 "Question1":{
-                    "Question":"What",
-                    "Answer":"",
-                    "Answer2":"",
-                    "Answer3":"",
-                    "Answer4":"",
-                    "Correct Answer":""
+                    "Question":"What did Smokey try to stop his car with in 'Friday'?",
+                    "Answer":"His brake",
+                    "Answer2":"Put the car in park",
+                    "Answer3":"His foot",
+                    "Answer4":"A wreck",
+                    "Correct Answer":"His foot"
+                },
+                "Question2":{
+                    "Question":"In 'Girl's Trip', who peed on the crowd on Bourbon Street? ",
+                    "Answer":"Lisa and Dina",
+                    "Answer2":"Dina and Sasha",
+                    "Answer3":"Sasha and Ryan",
+                    "Answer4":"Lisa and Ryan",
+                    "Correct Answer":"Lisa and Dina"
+                },
+                "Question3":{
+                    "Question":"Waht is the intro song in 'Belly'?",
+                    "Answer":"Back To Life",
+                    "Answer2":"C.R.E.A.M",
+                    "Answer3":"Big Poppa",
+                    "Answer4":"Me Against the World",
+                    "Correct Answer":"Back to Life"
+                },
+                "Question4":{
+                    "Question":"In what movie did Martin Lawrence get beat up by Monique?",
+                    "Answer":"Big Momma's House 2",
+                    "Answer2":"Death at a Funeral",
+                    "Answer3":"Big Momma's House",
+                    "Answer4":"Welcome Home Roscoe Jenkins",
+                    "Correct Answer":"Welcome Home Roscoe Jenkins"
+                },
+                "Question5":{
+                    "Question":"What three colors were used in the Emerald City scene in 'The Wiz'?",
+                    "Answer":"Purple, Pink and Green",
+                    "Answer2":"Green, Red, and Blue",
+                    "Answer3":"Orange, Gold and Green",
+                    "Answer4":"Green, Red and Gold",
+                    "Correct Answer":"Green, Red and Gold"
                 }
             }
         },
         "Music":{
             "Quiz1":{
                 "Question1":{
-                    "Question":"What",
-                    "Answer":"",
-                    "Answer2":"",
-                    "Answer3":"",
-                    "Answer4":"",
-                    "Correct Answer":""
+                    "Question":"How many times did Tupac get shot?",
+                    "Answer":"6",
+                    "Answer2":"7",
+                    "Answer3":"8",
+                    "Answer4":"5",
+                    "Correct Answer":"5"
+                },
+                "Question2":{
+                    "Question":"I don't know much about algebra but I ...",
+                    "Answer":"1+1 by Beyonce",
+                    "Answer2":"A Change is Gonna Come by Sam Cooke",
+                    "Answer3":"8",
+                    "Answer4":"5",
+                    "Correct Answer":"5"
+                },
+                "Question3":{
+                    "Question":"When Kystlis says 'hands up' you should?",
+                    "Answer":"Get Low",
+                    "Answer2":"Back",
+                    "Answer3":"Stop",
+                    "Answer4":"Reverse",
+                    "Correct Answer":"Get Low"
+                },"Question4":{
+                    "Question":"How many times did Tupac get shot?",
+                    "Answer":"6",
+                    "Answer2":"7",
+                    "Answer3":"8",
+                    "Answer4":"5",
+                    "Correct Answer":"5"
+                },
+                "Question5":{
+                    "Question":"What song did Smokey Robinson write for the Jackson 5?",
+                    "Answer":"Blame It On The Boogie",
+                    "Answer2":"I Want You Back",
+                    "Answer3":"Who's Lovin' You",
+                    "Answer4":"All I Do Is Think of You",
+                    "Correct Answer":"Who's Lovin' You"
+                },
+                "Question6":{
+                    "Question":"Who had the hishest selling album of 2004?",
+                    "Answer":"Mariah Carey",
+                    "Answer2":"Beyonce",
+                    "Answer3":"Usher",
+                    "Answer4":"Nelly",
+                    "Correct Answer":"Usher"
                 }
             }
         },
@@ -36,6 +107,6 @@
                 }
             }
         }
-
+    }
 
 }
