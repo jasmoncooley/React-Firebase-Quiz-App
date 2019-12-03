@@ -26,9 +26,9 @@ class LoginSignup extends Component {
                                     }
                                 }
                             />
-                            <h1> <font color="#FF00F2">Welcome to the Pre-Game!</font> </h1>
-                            <Link to="/login" ><RaisedButton type="submit" primary={false} backgroundColor='#FF00F2' >Log in</RaisedButton></Link>
-                            <Link to="/signup"><RaisedButton type="submit" primary={false} style={{ margin: 12 }} backgroundColor='#FF00F2' >Sign Up</RaisedButton></Link>
+                            <h1> <font color="#ff2e97">Welcome to the Pre-Game!</font> </h1>
+                            <Link to="/login" ><RaisedButton type="submit" primary={false} backgroundColor='#FFFFFF' >Log in</RaisedButton></Link>
+                            <Link to="/signup"><RaisedButton type="submit" primary={false} style={{ margin: 12 }} backgroundColor='#FFFFFF' >Sign Up</RaisedButton></Link>
                         </div>
                     </center>
                 </MuiThemeProvider>
