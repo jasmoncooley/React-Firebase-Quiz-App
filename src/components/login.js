@@ -13,7 +13,7 @@ const style = {
   display: 'inline-block',
 };
 const style1 = {
-   color: "rgb(0, 188, 212)",
+   color: "rgb(255, 0, 230)",
   
 };
 const style2 = {
