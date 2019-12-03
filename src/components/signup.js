@@ -15,7 +15,7 @@ const style1 = {
   
 };
 const style2 = {
-   color: "white",
+   color: "pink", 
   
 };
 class Signup extends Component {
