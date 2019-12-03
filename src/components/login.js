@@ -13,11 +13,11 @@ const style = {
   display: 'inline-block',
 };
 const style1 = {
-   color: "rgb(255, 0, 230)",
+   color: "#e75480",
   
 };
 const style2 = {
-   color: "rgb(255, 0, 230)",
+   color: "#e75480",
   
 };
 const email = '';

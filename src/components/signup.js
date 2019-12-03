@@ -11,11 +11,11 @@ const style = {
      margin: "20px 0px 20px 0px",
 };
 const style1 = {
-   color: "rgb(0, 188, 212)",
+   color: "#E75480",
   
 };
 const style2 = {
-   color: "rgb(0, 188, 212)", 
+   color: "#e75480", 
   
 };
 class Signup extends Component {
