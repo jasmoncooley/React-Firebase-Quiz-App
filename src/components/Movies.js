@@ -121,19 +121,6 @@ export default class Movies extends React.Component {
 
         let a = this.state.count + 1
         this.setState({ count: a })
-<<<<<<< HEAD
-        if (!this.state.donors[a]) {
-            console.log(data1['Redirects'])
-            if (data1['Redirects'] < 5) {
-                data1['Redirects'] +=1
-                browserHistory.push('/Movies')
-            }
-            else if (data1['Redirects'] = 5) {
-                data1['Redirects'] = 0;
-                browserHistory.push('/result')
-            }
-
-=======
         // console.log(this.state.donors[a])
         // if (!this.state.donors[a]) {
         console.log(data1['Questions']['Redirects'])
@@ -142,7 +129,6 @@ export default class Movies extends React.Component {
             data1['Questions']['Redirects'] += 1
             console.log(typeof data1['Questions']['Redirects'])
             browserHistory.push('/Movies')
->>>>>>> 1985bda58101594ef8009cf63aafd35c917dde5a
         }
         else if (data1['Questions']['Redirects'] >= 3) {
             console.log('tre')
