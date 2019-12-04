@@ -89,15 +89,19 @@ export default class Movies extends React.Component {
     }
 
     loadQuestion() {
-        var radios = document.getElementsByName('option');
+        var radios = document.getElementsByName('shipSpeed');
         console.log(radios);
         for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
                 console.log(radios[i].value)
                 if (this.state.Ans === radios[i].value) {
-                    this.setState((prevState) => ({
-                        score: prevState.score + 100 /this.state.TotalQuestion
-                    }))
+                    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/Score').on('value', (data) => {
+                        console.log(typeof data.val())
+                        this.state.score = parseInt(data.val())
+                    })
+                    console.log(typeof this.state.score);
+                    this.state.score = this.state.score +5;
+                    console.log(this.state.score);
                 }
                 else {
                     console.log("bad")
@@ -106,6 +110,8 @@ export default class Movies extends React.Component {
             }
 
         }
+        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score)
+
         setTimeout(() => {
             console.log(this.state.score);
             firebase.database().ref("Score/S").set(this.state.score + "%")
@@ -215,15 +221,15 @@ componentWillMount() {
             }
             var quesData = [];
             for (var i =1; i <= 6; i++){
-                var rec = {Question: "Questions" + i};
-                rec = Math.round(Math.random() * 5);
+                // var rec = {Question: "Questions" + i};
+                var rec = Math.round(Math.random() * 5);
                 console.log(typeof rec);
             }
-            do {
-                Question += "new question" + que;
-                que++;
-            }
-            while (que < 5) {
+            // do {
+            //     Question += "new question" + que;
+            //     que++;
+            // }
+            // while (que < 5) {
                 const que = 'Question'+ rec;
                 console.log(que);
                 let Question = data1['Questions']['Movies']['Quiz1'][que]['Question'];
@@ -232,7 +238,7 @@ componentWillMount() {
                 let op3 = data1['Questions']['Movies']['Quiz1'][que]['Answer2'];
                 let op4 = data1['Questions']['Movies']['Quiz1'][que]['Answer4'];
                 let Ans = data1['Questions']['Movies']['Quiz1'][que]['Correct Answer'];
-            }
+            // }
             // let ans = ques[0].Answer;
             this.setState({
                 Question: Question,
