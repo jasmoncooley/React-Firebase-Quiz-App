@@ -9,7 +9,7 @@ import ContentAdd from 'material-ui/svg-icons/action/done';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
-import data1 from '../questions.json';
+import data1 from './question.json';
 
 
 const style1 = {
@@ -119,7 +119,9 @@ export default class Music extends React.Component {
         let a = this.state.count + 1
         this.setState({ count: a })
         if (!this.state.donors[a]) {
+            console.log(data1['Redirects'])
             if (data1['Redirects'] < 3) {
+                data1['Redirects'] +=1
                 browserHistory.push('/Music')
             }
             else if (data1['Redirects'] = 3) {
