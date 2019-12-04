@@ -9,9 +9,7 @@ import ContentAdd from 'material-ui/svg-icons/action/done';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
-import YoutubePlayer from 'react-youtube-player';
 import data1 from './question.json';
-
 
 
 const style1 = {
@@ -111,7 +109,6 @@ export default class Movies extends React.Component {
             }
 
         }
-        
 
         // setTimeout(() => {
         //     console.log(this.state.score);
@@ -121,19 +118,6 @@ export default class Movies extends React.Component {
 
         let a = this.state.count + 1
         this.setState({ count: a })
-<<<<<<< HEAD
-        if (!this.state.donors[a]) {
-            console.log(data1['Redirects'])
-            if (data1['Redirects'] < 5) {
-                data1['Redirects'] +=1
-                browserHistory.push('/Movies')
-            }
-            else if (data1['Redirects'] = 5) {
-                data1['Redirects'] = 0;
-                browserHistory.push('/result')
-            }
-
-=======
         // console.log(this.state.donors[a])
         // if (!this.state.donors[a]) {
         console.log(data1['Questions']['Redirects'])
@@ -142,7 +126,6 @@ export default class Movies extends React.Component {
             data1['Questions']['Redirects'] += 1
             console.log(typeof data1['Questions']['Redirects'])
             browserHistory.push('/Movies')
->>>>>>> 1985bda58101594ef8009cf63aafd35c917dde5a
         }
         else if (data1['Questions']['Redirects'] >= 3) {
             console.log('tre')
@@ -228,7 +211,7 @@ export default class Movies extends React.Component {
                 Title: 'Movies',
                 Totalmarks: obj.Totalmarks,
                 TotalQuestion: obj.TotalQuestion,
-                TotalTime: '1'
+                TotalTime: '5'
             })
             this.timer()
 
@@ -240,16 +223,13 @@ export default class Movies extends React.Component {
             for (var prop in obj) {
 
                 ques.push(obj[prop]);
-                
                 // console.log(don);
             }
 
             // var rec = {Question: "Questions" + i};
             var rec = Math.round(Math.random() * 5);
-            
             if (rec == 0) {
                 rec = Math.round(Math.random() * 5);
-            
             }
             // console.log(rec);
 
@@ -283,43 +263,31 @@ export default class Movies extends React.Component {
                 <MuiThemeProvider>
                     <div>
                         <center>
-                            <Paper style={style5} zDepth={5}>
+                            <Paper style={style5} zDepth={3}>
                                 <h1 style={style7}>{this.state.Title} Quiz!</h1>
                                 <span style={style}>{this.state.timer}</span>
 
-                                <h4 style={style2}>{this.state.Question} 
-                            </h4>
+                                <h4 style={style2}>{this.state.Question}</h4>
                                 <br />
                                 <br />
                                 <div ref="val">
-                                    <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
-                                        <RadioButton
-                                            value={this.state.op1}
-                                            label={this.state.op1}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-
-                                        <RadioButton
-                                            value={this.state.op2}
-                                            label={this.state.op2}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-                                        <RadioButton
-                                            value={this.state.op3}
-                                            label={this.state.op3}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-                                        <RadioButton
-                                            value={this.state.op4}
-                                            label={this.state.op4}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-
-                                    </RadioButtonGroup>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Age</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Jill</td>
+                                            <td>Smith</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eve</td>
+                                            <td>Jackson</td>
+                                            <td>94</td>
+                                        </tr>
+                                    </table>
 
                                 </div>
                                 <FloatingActionButton style={style} onClick={this.loadQuestion}>
@@ -327,11 +295,9 @@ export default class Movies extends React.Component {
                                 </FloatingActionButton>
                             </Paper>
                         </center>
-                        
 
                     </div>
                 </MuiThemeProvider>
-    
             </div>
         )
     }
