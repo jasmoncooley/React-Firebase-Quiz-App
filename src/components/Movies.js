@@ -82,7 +82,8 @@ export default class Movies extends React.Component {
             Totalmarks: "",
             TotalQuestion: "",
             score: 0,
-            TotalTime: ""
+            TotalTime: "",
+            ID:""
 
         }
         this.loadQuestion = this.loadQuestion.bind(this);
@@ -122,6 +123,7 @@ export default class Movies extends React.Component {
         this.setState({ count: a })
         if (!this.state.donors[a]) {
             if(data1['Redirects']<3){
+                console.log(data1['Redirects']);
             browserHistory.push('/Movies')
             }
             else if (data1['Redirects']=3) {
@@ -247,6 +249,9 @@ export default class Movies extends React.Component {
             let op3 = data1['Questions']['Movies']['Quiz1'][que]['Answer2'];
             let op4 = data1['Questions']['Movies']['Quiz1'][que]['Answer4'];
             let Ans = data1['Questions']['Movies']['Quiz1'][que]['Correct Answer'];
+            this.state.ID = data1['Questions']['Movies']['Quiz1']['Question1']['VideoID'];
+            console.log(this.state.ID);
+
             // }
             // let ans = ques[0].Answer;
             this.setState({
@@ -280,8 +285,8 @@ export default class Movies extends React.Component {
 
                                 <br />
                                 <br /><YoutubePlayer
-                                    videoId='48l92b0XxW4'
-                                    playbackState='playing'
+                                    videoId={this.state.ID}
+                                    playbackState='paused'
 
                                     configuration={
                                         {
