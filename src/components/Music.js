@@ -120,7 +120,7 @@ export default class Music extends React.Component {
         this.setState({ count: a })
         if (!this.state.donors[a]) {
             if (data1['Redirects'] < 3) {
-                browserHistory.push('/Movies')
+                browserHistory.push('/Music')
             }
             else if (data1['Redirects'] = 3) {
                 data1['Redirects'] = 0;

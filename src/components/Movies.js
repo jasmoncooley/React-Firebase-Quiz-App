@@ -123,6 +123,7 @@ export default class Movies extends React.Component {
         this.setState({ count: a })
         if (!this.state.donors[a]) {
             if(data1['Redirects']<3){
+                console.log(data1['Redirects']);
             browserHistory.push('/Movies')
             }
             else if (data1['Redirects']=3) {
