@@ -180,56 +180,56 @@ import React from 'react';
  
      var don = [];
  
-     firebase.database().ref('QuizQuestion/').on('value', (data) => {
-         let obj = data.val();
-             // console.log(obj);
-             for (var prop in obj) {
-                 don.push(obj[prop]);
-                 // console.log(don);
-                 this.setState({
-                     donors: don
-                 })
-             }
-         })
-     firebase.database().ref('QuizDetail').on('value', (data) => {
-         let obj = data.val();
-         console.log(obj.Title)
-         this.setState({
-             Title: obj.Title,
-             Totalmarks: obj.Totalmarks,
-             TotalQuestion: obj.TotalQuestion,
-             TotalTime: obj.Totaltime
-         })
-         this.timer()
+    //  firebase.database().ref('QuizQuestion/').on('value', (data) => {
+    //      let obj = data.val();
+    //          // console.log(obj);
+    //          for (var prop in obj) {
+    //              don.push(obj[prop]);
+    //              // console.log(don);
+    //              this.setState({
+    //                  donors: don
+    //              })
+    //          }
+    //      })
+    //  firebase.database().ref('QuizDetail').on('value', (data) => {
+    //      let obj = data.val();
+    //      console.log(obj.Title)
+    //      this.setState({
+    //          Title: obj.Title,
+    //          Totalmarks: obj.Totalmarks,
+    //          TotalQuestion: obj.TotalQuestion,
+    //          TotalTime: obj.Totaltime
+    //      })
+    //      this.timer()
  
-     })
-     firebase.database().ref('QuizQuestion/').on('value', (data) => {
-         let ques = [];
-         let obj = data.val();
-             // console.log(obj.op1)
-             for (var prop in obj) {
-                 ques.push(obj[prop]);
-                 // console.log(don);
-             }
-             console.log(ques[1].Question);
-             let Question = ques[0].Question;
-             let op1 = ques[0].op1;
-             let op2 = ques[0].op2;
-             let op3 = ques[0].op3;
-             let op4 = ques[0].op4;
-             let Ans = ques[0].Answer;
+    //  })
+    //  firebase.database().ref('QuizQuestion/').on('value', (data) => {
+    //      let ques = [];
+    //      let obj = data.val();
+    //          // console.log(obj.op1)
+    //          for (var prop in obj) {
+    //              ques.push(obj[prop]);
+    //              // console.log(don);
+    //          }
+    //          console.log(ques[1].Question);
+    //          let Question = ques[0].Question;
+    //          let op1 = ques[0].op1;
+    //          let op2 = ques[0].op2;
+    //          let op3 = ques[0].op3;
+    //          let op4 = ques[0].op4;
+    //          let Ans = ques[0].Answer;
  
-             // let ans = ques[0].Answer;
-             this.setState({
-                 Question: Question,
-                 op1: op1,
-                 op2: op2,
-                 op3: op3,
-                 op4: op4,
-                 Ans: Ans
-             })
+    //          // let ans = ques[0].Answer;
+    //          this.setState({
+    //              Question: Question,
+    //              op1: op1,
+    //              op2: op2,
+    //              op3: op3,
+    //              op4: op4,
+    //              Ans: Ans
+    //          })
  
-         })
+    //      })
  
  }
  
@@ -246,11 +246,17 @@ import React from 'react';
              <center>
              {/* <Paper style={style5} zDepth={3}> */}
              {/* <h1 style={style7}>{this.state.Title} Quiz!</h1> */}
-             <Link to="/Movies"><RaisedButton primary={true} ><span style={{margin: 52}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF'><span style={{margin: 52}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Television"><RaisedButton primary={true} ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Music"><RaisedButton primary={true} ><span style={{margin: 50}}>Music</span></RaisedButton></Link>
+             <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+
+             <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
+
+
+
+
             
             {/* <span style={style}>{this.state.timer}</span> */}
  

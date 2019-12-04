@@ -190,7 +190,7 @@ componentWillMount() {
                 })
             }
         })
-    firebase.database().ref('QuizDetail').on('value', (data) => {
+    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/1/QuizDetail').on('value', (data) => {
         let obj = data.val();
         console.log(obj.Title)
         this.setState({
@@ -202,21 +202,23 @@ componentWillMount() {
         this.timer()
 
     })
-    firebase.database().ref('QuizQuestion/').on('value', (data) => {
+    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/1/Questions/QuizQuestion').on('value', (data) => {
         let ques = [];
         let obj = data.val();
             // console.log(obj.op1)
             for (var prop in obj) {
+                
                 ques.push(obj[prop]);
+                console.log(ques);
                 // console.log(don);
             }
             console.log(ques[1].Question);
-            let Question = ques[0].Question;
-            let op1 = ques[0].op1;
-            let op2 = ques[0].op2;
-            let op3 = ques[0].op3;
-            let op4 = ques[0].op4;
-            let Ans = ques[0].Answer;
+            let Question = ques[0];
+            let op1 = ques[1];
+            let op2 = ques[2];
+            let op3 = ques[3];
+            let op4 = ques[4];
+            let Ans = ques[5];
 
             // let ans = ques[0].Answer;
             this.setState({

@@ -13,11 +13,10 @@ class LoginSignup extends Component {
                 <MuiThemeProvider>
                     <center>
                         <div>
-                            <YoutubePlayer    
-                            //height= '350'
-                                //width= '640'
+                            <YoutubePlayer 
                                 videoId='48l92b0XxW4'
                                 playbackState='playing'
+
                                 configuration={
                                     {
 
