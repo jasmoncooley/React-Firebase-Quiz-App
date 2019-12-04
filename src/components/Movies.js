@@ -275,6 +275,18 @@ export default class Movies extends React.Component {
 
                                 <h4 style={style2}>{this.state.Question} 
                             </h4>
+                            <YoutubePlayer 
+                                videoId=''
+                                playbackState='playing'
+
+                                configuration={
+                                    {
+
+                                        showinfo: 0,
+                                        controls: 0
+                                    }
+                                }
+                            />
                                 <br />
                                 <br />
                                 <div ref="val">
