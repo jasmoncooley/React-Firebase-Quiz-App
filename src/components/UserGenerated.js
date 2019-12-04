@@ -63,7 +63,7 @@ const styles = {
 };
 
 
-componentWillMount(); {
+componentWillMount();   {
  
     var don = [];
 
@@ -122,7 +122,7 @@ componentWillMount(); {
 
 
 render(); {
-    // console.log(this.state.TotalTime);
+console.log(this.state.TotalTime);
     return (
         <div>
             <MuiThemeProvider>
@@ -187,7 +187,7 @@ render(); {
                 </div>
             </MuiThemeProvider>
         </div>
-    )
-}
+   // )
+//}
 
 
