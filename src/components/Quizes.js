@@ -242,27 +242,27 @@ import React from 'react';
          return (
 
              <div class= "verticalmenu">
-             <MuiThemeProvider>
-             <div >
-             <center>
-             <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                <MuiThemeProvider>
+                    <div >
+                        <center>
+                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>User Questions</span></RaisedButton></Link>
-
-             {/* </div> */}
-             {/* <FloatingActionButton style={stylee} onClick={this.loadQuestion}> */}
-             <ContentAdd /> 
-             {/* </FloatingActionButton> */}
-             {/* </Paper> */}
-             </center>
+                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>User Questions</span></RaisedButton></Link>
+                       
+                                {/* </div> */}
+                {                   /* <FloatingActionButton style={stylee} onClick={this.loadQuestion}> */}
+                                        <ContentAdd /> 
+                                    {/* </FloatingActionButton> */}
+                            {/* </Paper> */}
+                            </center>
  
-             </div>
-             </MuiThemeProvider>
-             </div>
+                        </div>
+                </MuiThemeProvider>
+                </div>
          )
      }
  }
