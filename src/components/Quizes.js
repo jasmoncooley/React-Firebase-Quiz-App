@@ -245,11 +245,11 @@ import React from 'react';
                 <MuiThemeProvider>
                     <div >
                         <center>
-                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Movies</span></RaisedButton></Link>
+                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Movies</span></RaisedButton></Link>&nbsp;
 
-                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Television</span></RaisedButton></Link>
+                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Television</span></RaisedButton></Link>&nbsp;
 
-                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Music</span></RaisedButton></Link>
+                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Music</span></RaisedButton></Link>&nbsp;
 
                             <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>User Questions</span></RaisedButton></Link>
                                         <ContentAdd /> 
