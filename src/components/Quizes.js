@@ -245,15 +245,15 @@ import React from 'react';
                 <MuiThemeProvider>
                     <div >
                         <center>
-                            <Link to="/Movies"><RaisedButton primary={false} style={{ marginTop: 350, fontSize: 50}} backgroundColor='#FFFFFF' >< span style={{margin: 60}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <Link to="/Movies"><RaisedButton primary={false} style={{ marginTop: 350, fontSize: 38}} backgroundColor='#FFFFFF' >< span style={{margin: 60}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                            <Link to="/Television"><RaisedButton primary={false} style={{ fontSize: 50}} backgroundColor='#FFFFFF' ><span style={{margin: 52}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-                            <Link to="/Music"><RaisedButton primary={false} style={{ fontSize: 50}} backgroundColor='#FFFFFF' ><span style={{margin: 65}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <Link to="/Television"><RaisedButton primary={false} style={{ fontSize: 38}} backgroundColor='#FFFFFF' ><span style={{margin: 52}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-                            <Link to="/UserGenerated"><RaisedButton primary={false} style={{ fontSize: 50}} backgroundColor='#FFFFFF' ><span style={{margin: 35}}>User Questions</span></RaisedButton></Link>
+                            <Link to="/Music"><RaisedButton primary={false} style={{ fontSize: 38}} backgroundColor='#FFFFFF' ><span style={{margin: 65}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                            <Link to="/UserGenerated"><RaisedButton primary={false} style={{ fontSize: 38}} backgroundColor='#FFFFFF'><span style={{margin: 35}}>User Questions</span></RaisedButton></Link>
                                         <ContentAdd /> 
                             </center>
                         </div>
