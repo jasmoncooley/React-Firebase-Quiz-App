@@ -10,7 +10,7 @@ import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import data1 from '../questions.json';
-import YoutubePlayer from 'react-youtube-player';
+
 
 const style1 = {
     float: "right",
@@ -82,8 +82,7 @@ export default class Movies extends React.Component {
             Totalmarks: "",
             TotalQuestion: "",
             score: 0,
-            TotalTime: "",
-            ID:""
+            TotalTime: ""
 
         }
         this.loadQuestion = this.loadQuestion.bind(this);
@@ -92,19 +91,16 @@ export default class Movies extends React.Component {
 
     loadQuestion() {
         var radios = document.getElementsByName('shipSpeed');
-        // console.log(radios);
         for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
                 console.log(radios[i].value)
                 if (this.state.Ans === radios[i].value) {
                     firebase.database().ref('UserInfo/' + firebase.auth().currentUser.uid + '/Quizzes/Score').on('value', (data) => {
-                        // console.log(typeof data.val())
                         this.state.score = parseInt(data.val())
                     })
-                    // console.log(typeof this.state.score);
                     this.state.score = this.state.score + 5;
                     firebase.database().ref("UserInfo/" + firebase.auth().currentUser.uid + "/Quizzes/Score").set(this.state.score)
-                    // console.log(this.state.score);
+                    console.log(this.state.score);
                 }
                 else {
                     console.log("bad")
@@ -113,24 +109,25 @@ export default class Movies extends React.Component {
             }
 
         }
+
         setTimeout(() => {
             console.log(this.state.score);
-            firebase.database().ref("Score/S").set(this.state.score + "%")
+            // firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score + "%")
 
         }, 500)
 
         let a = this.state.count + 1
         this.setState({ count: a })
         if (!this.state.donors[a]) {
-            if(data1['Redirects']<3){
-                console.log(data1['Redirects']);
-            browserHistory.push('/Movies')
+            console.log(data1['Redirects'])
+            if (data1['Redirects'] < 3) {
+                data1['Redirects'] +=1
+                browserHistory.push('/Movies')
             }
-            else if (data1['Redirects']=3) {
-                data1['Redirects']=0;
+            else if (data1['Redirects'] = 3) {
+                data1['Redirects'] = 0;
                 browserHistory.push('/result')
             }
-            
 
         }
         else {
@@ -157,7 +154,6 @@ export default class Movies extends React.Component {
 
         var min = this.state.TotalTime
         var sec = 0;
-        // console.log(min)
 
         setInterval(() => {
             var time;
@@ -207,8 +203,6 @@ export default class Movies extends React.Component {
         })
         firebase.database().ref('UserInfo/').on('value', (data) => {
             let obj = data.val();
-            // console.log(obj.Title)
-            // console.log(data1['Questions']['Movies']['Quiz1']);
             this.setState({
                 Title: 'Movies',
                 Totalmarks: obj.Totalmarks,
@@ -225,34 +219,24 @@ export default class Movies extends React.Component {
             for (var prop in obj) {
 
                 ques.push(obj[prop]);
-                // console.log(ques);
                 // console.log(don);
             }
-            var quesData = [];
-                // var rec = {Question: "Questions" + i};
-                var rec = Math.round(Math.random() * 5);
-                if (rec == 0){
-                    rec = Math.round(Math.random() * 5);
-                }
-                // console.log(rec);
-            
-            // do {
-            //     Question += "new question" + que;
-            //     que++;
-            // }
-            // while (que < 5) {
+
+            // var rec = {Question: "Questions" + i};
+            var rec = Math.round(Math.random() * 5);
+            if (rec == 0) {
+                rec = Math.round(Math.random() * 5);
+            }
+            console.log(rec);
+
             const que = 'Question' + rec;
-            console.log(que);
             let Question = data1['Questions']['Movies']['Quiz1'][que]['Question'];
             let op1 = data1['Questions']['Movies']['Quiz1'][que]['Answer'];
             let op2 = data1['Questions']['Movies']['Quiz1'][que]['Answer3'];
             let op3 = data1['Questions']['Movies']['Quiz1'][que]['Answer2'];
             let op4 = data1['Questions']['Movies']['Quiz1'][que]['Answer4'];
             let Ans = data1['Questions']['Movies']['Quiz1'][que]['Correct Answer'];
-            this.state.ID = data1['Questions']['Movies']['Quiz1']['Question1']['VideoID'];
-            console.log(this.state.ID);
 
-            // }
             // let ans = ques[0].Answer;
             this.setState({
                 Question: Question,
@@ -282,20 +266,8 @@ export default class Movies extends React.Component {
                                 <span style={style}>{this.state.timer}</span>
 
                                 <h4 style={style2}>{this.state.Question}</h4>
-
                                 <br />
-                                <br /><YoutubePlayer
-                                    videoId={this.state.ID}
-                                    playbackState='paused'
-
-                                    configuration={
-                                        {
-
-                                            showinfo: 0,
-                                            controls: 0
-                                        }
-                                    }
-                                />
+                                <br />
                                 <div ref="val">
                                     <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
                                         <RadioButton
