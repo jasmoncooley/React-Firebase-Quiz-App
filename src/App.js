@@ -15,6 +15,7 @@ import Result from './components/result'
 import Movies from './components/Movies'
 import Leaderboard from './components/Leaderboard'
 import UserGenerated from './components/UserGenerated'
+import Television from './components/Television'
 
 
 
@@ -36,6 +37,7 @@ class App extends Component {
                     <Route path="Music" component={Music} />
                     <Route path="Leaderboard" component={Leaderboard} />
                     <Route path="UserGenerated" component={UserGenerated} />
+                    <Route path="Television" component={Television} />
                 </Route>
             </Router>
         )

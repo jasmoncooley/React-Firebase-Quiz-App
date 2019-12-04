@@ -249,9 +249,7 @@ import React from 'react';
 
                             <Link to="/Television"><RaisedButton primary={false} style={{ fontSize: 38}} backgroundColor='#FFFFFF' ><span style={{margin: 52}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-
                             <Link to="/Music"><RaisedButton primary={false} style={{ fontSize: 38}} backgroundColor='#FFFFFF' ><span style={{margin: 65}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
 
                             <Link to="/UserGenerated"><RaisedButton primary={false} style={{ fontSize: 38}} backgroundColor='#FFFFFF'><span style={{margin: 35}}>User Questions</span></RaisedButton></Link>
                                         <ContentAdd /> 
