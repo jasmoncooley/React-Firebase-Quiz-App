@@ -12,9 +12,10 @@ class Result extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            Score: ""
+            Score: "",
+            username:""
 
-        }
+        }  
     }
 
      componentWillMount() {
@@ -26,9 +27,44 @@ class Result extends React.Component {
             //     Score: data.val()
             // })
         })
+        firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/username').on('value', (data) => {
+            console.log(data.val())
         
+            this.setState({
+                username: data.val()
+            })
+        })
+        firebase.database().ref('UserInfo/Max_Score').on('value',(data)=>{
+            console.log(data.val())
+        })
     }
    
+    // computeLeaderboard(){
+    //     var dict = {}
+    //     dict[this.state.username] = this.state.Score;
+    //     if (dict[this.state.username]>maxScore){
+    //         updateSingleData(maxScore){
+    //         }
+    //     }
+
+        // updateSingleData(maxScore){
+        //     firebase.database().ref('/').update({
+        //         maxScore,
+        //     });
+        // }
+        // var max=0
+        // var i=0
+        // var top = [];
+        // for (var key in dict){
+        //     if(dict[key]>max){
+        //         top[i]=dict[key]
+        //         i=i+1
+        //     }
+        //}
+
+
+
+
     render() {
       
         return (
@@ -52,5 +88,6 @@ class Result extends React.Component {
             </div>
         )
     }
+    
 }
 export default Result;

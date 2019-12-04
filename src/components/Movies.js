@@ -9,7 +9,9 @@ import ContentAdd from 'material-ui/svg-icons/action/done';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
+import YoutubePlayer from 'react-youtube-player';
 import data1 from './question.json';
+
 
 
 const style1 = {
@@ -109,6 +111,7 @@ export default class Movies extends React.Component {
             }
 
         }
+        
 
         // setTimeout(() => {
         //     console.log(this.state.score);
@@ -211,7 +214,7 @@ export default class Movies extends React.Component {
                 Title: 'Movies',
                 Totalmarks: obj.Totalmarks,
                 TotalQuestion: obj.TotalQuestion,
-                TotalTime: '5'
+                TotalTime: '1'
             })
             this.timer()
 
@@ -223,13 +226,16 @@ export default class Movies extends React.Component {
             for (var prop in obj) {
 
                 ques.push(obj[prop]);
+                
                 // console.log(don);
             }
 
             // var rec = {Question: "Questions" + i};
             var rec = Math.round(Math.random() * 5);
+            
             if (rec == 0) {
                 rec = Math.round(Math.random() * 5);
+            
             }
             // console.log(rec);
 
@@ -263,11 +269,12 @@ export default class Movies extends React.Component {
                 <MuiThemeProvider>
                     <div>
                         <center>
-                            <Paper style={style5} zDepth={3}>
+                            <Paper style={style5} zDepth={5}>
                                 <h1 style={style7}>{this.state.Title} Quiz!</h1>
                                 <span style={style}>{this.state.timer}</span>
 
-                                <h4 style={style2}>{this.state.Question}</h4>
+                                <h4 style={style2}>{this.state.Question} 
+                            </h4>
                                 <br />
                                 <br />
                                 <div ref="val">
@@ -306,9 +313,11 @@ export default class Movies extends React.Component {
                                 </FloatingActionButton>
                             </Paper>
                         </center>
+                        
 
                     </div>
                 </MuiThemeProvider>
+    
             </div>
         )
     }
