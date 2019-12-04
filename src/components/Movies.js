@@ -79,6 +79,7 @@ export default class Movies extends React.Component {
             op3: "",
             op4: "",
             Ans: "",
+            videoId: "",
             timer: 0,
             Title: "",
             Totalmarks: "",
@@ -241,6 +242,7 @@ export default class Movies extends React.Component {
 
             const que = 'Question' + rec;
             let Question = data1['Questions']['Movies']['Quiz1'][que]['Question'];
+            let videoId = data1['Questions']['Movies']['Quiz1'][que]['videoId'];
             let op1 = data1['Questions']['Movies']['Quiz1'][que]['Answer'];
             let op2 = data1['Questions']['Movies']['Quiz1'][que]['Answer3'];
             let op3 = data1['Questions']['Movies']['Quiz1'][que]['Answer2'];
@@ -250,6 +252,7 @@ export default class Movies extends React.Component {
             // let ans = ques[0].Answer;
             this.setState({
                 Question: Question,
+                videoId: videoId,
                 op1: op1,
                 op2: op2,
                 op3: op3,
@@ -275,8 +278,8 @@ export default class Movies extends React.Component {
 
                                 <h4 style={style2}>{this.state.Question} 
                             </h4>
-                            <YoutubePlayer 
-                                videoId=''
+                            {/* <YoutubePlayer 
+                                videoId= 'string'
                                 playbackState='playing'
 
                                 configuration={
@@ -286,7 +289,7 @@ export default class Movies extends React.Component {
                                         controls: 0
                                     }
                                 }
-                            />
+                            /> */}
                                 <br />
                                 <br />
                                 <div ref="val">
