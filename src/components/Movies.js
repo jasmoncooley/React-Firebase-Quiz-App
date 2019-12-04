@@ -106,7 +106,12 @@ export default class Movies extends React.Component {
                 }
                 else {
                     console.log("bad")
+                    if(this.state.score >= 0) {
+                    this.state.score = this.state.score - 5;
+                    firebase.database().ref("UserInfo/" + firebase.auth().currentUser.uid + "/Quizzes/Score").set(this.state.score)
+                    //firebase.database().ref("UserInfo/") + firebase.auth().currentUser.uid + "/Quizzes/Score").set(this.state.score)
                 }
+            }
                 break;
             }
 
