@@ -52,7 +52,8 @@ class Result extends React.Component {
                             <h1><font color="#ff2e97">Your Score {this.state.Score}</font></h1>
 
                                 <div>
-                                    <h1><font color="#ff2e97">Username {this.state.username}   Your Score{this.state.Score}</font></h1>
+                                    <h1><font color="#ff2e97">Username                       Your Score</font></h1>
+                                    <h1><font color="#ff2e97">Username                       Your Score</font></h1>
                                 </div>    
 
                            
