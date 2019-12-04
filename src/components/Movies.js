@@ -79,7 +79,7 @@ export default class Movies extends React.Component {
             op3: "",
             op4: "",
             Ans: "",
-            timer: 0,
+            //timer: 0,
             Title: "",
             Totalmarks: "",
             TotalQuestion: "",
