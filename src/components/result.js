@@ -25,6 +25,13 @@ class Result extends React.Component {
                 Score: data.val(),
             })
         })
+        firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/username').on('value', (data) => {
+            console.log(data.val())
+        
+            this.setState({
+                username: data.val()
+            })
+        })
     }
    
     // computeLeaderboard(){
