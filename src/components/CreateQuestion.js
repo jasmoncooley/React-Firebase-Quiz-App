@@ -72,7 +72,7 @@ export default class CreatQuiz extends React.Component {
         }
         else{
         // firebase.database().ref('QuizQuestion').push(QuizQuestion)
-        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/"+QuizDetail.Title+"/Questions").update({QuizQuestion});
+        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Questions/").update({QuizQuestion});
 
         console.log(QuizQuestion)
         browserHistory.push('/Start')
@@ -104,7 +104,7 @@ export default class CreatQuiz extends React.Component {
             this.refs.Question.input.focus()
         }
         else{
-        firebase.database().ref('QuizQuestion').push(QuizQuestion)
+        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Questions/").update(QuizQuestion)
         console.log(QuizQuestion)
 
         this.refs.Question.input.value = " ";
