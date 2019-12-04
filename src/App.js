@@ -10,7 +10,9 @@ import CreatQuiz from './components/CreatQuiz'
 import AttemtQuiz from './components/AttemtQuiz'
 import CreateQuestion from './components/CreateQuestion'
 import Quizes from './components/Quizes'
+import Music from './components/Music'
 import Result from './components/result'
+import Movies from './components/Movies'
 
 
 
@@ -28,6 +30,8 @@ class App extends Component {
                     <Route path="CreateQuestion" component={CreateQuestion} />
                     <Route path="Quizes" component={Quizes} />
                     <Route path="result" component={Result} />
+                    <Route path="Movies" component={Movies} />
+                    <Route path="Music" component={Music} />
                 </Route>
             </Router>
         )
