@@ -241,7 +241,7 @@ import React from 'react';
          // console.log(this.state.TotalTime);
          return (
 
-             <div class= "verticalmenu">
+             <div>
                 <MuiThemeProvider>
                     <div >
                         <center>
@@ -251,15 +251,9 @@ import React from 'react';
 
                             <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>User Questions</span></RaisedButton></Link>
-                       
-                                {/* </div> */}
-                {                   /* <FloatingActionButton style={stylee} onClick={this.loadQuestion}> */}
+                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>User Questions</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
                                         <ContentAdd /> 
-                                    {/* </FloatingActionButton> */}
-                            {/* </Paper> */}
                             </center>
- 
                         </div>
                 </MuiThemeProvider>
                 </div>
