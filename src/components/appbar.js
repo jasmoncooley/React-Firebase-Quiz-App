@@ -12,7 +12,7 @@ class Bar extends Component {
       super(props);
         
       this.state = {
-         value: "Log-In",
+         value: "Leaderboard",
       }
    }
     home(ev){
@@ -22,8 +22,8 @@ class Bar extends Component {
     }
       signout(ev) {
         ev.preventDefault();      
-            console.log("Sign out successful"),
-            browserHistory.push('/login')
+            // console.log("Sign out successful"),
+            browserHistory.push('/Leaderboard')
  }
  
     render() {
