@@ -246,13 +246,13 @@ import React from 'react';
              <center>
              {/* <Paper style={style5} zDepth={3}> */}
              {/* <h1 style={style7}>{this.state.Title} Quiz!</h1> */}
-             <Link to="/Movies"><RaisedButton primary={true} ><span style={{margin: 52}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF'><span style={{margin: 52}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Television"><RaisedButton primary={true} ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Music"><RaisedButton primary={true} ><span style={{margin: 50}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/UserGenerated"><RaisedButton primary={true} ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
+             <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
 
 
 
