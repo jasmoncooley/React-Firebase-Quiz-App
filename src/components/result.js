@@ -34,12 +34,10 @@ class Result extends React.Component {
         })
     }
    
-    // computeLeaderboard(){
-    //     var dict = {}
-    //     dict[] = this.state.Score;
-
-
-    //}
+    computeLeaderboard(){
+        var dict = {}
+        dict[this.state.username] = this.state.Score;
+    }
 
 
     render() {
