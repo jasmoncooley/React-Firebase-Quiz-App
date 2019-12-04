@@ -90,15 +90,13 @@ export default class Music extends React.Component {
     }
 
     loadQuestion() {
-        var radios = document.getElementsByName('option');
-        console.log(radios);
+        var radios = document.getElementsByName('shipSpeed');
         for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
                 console.log(radios[i].value)
                 if (this.state.Ans === radios[i].value) {
-                    this.setState((prevState) => ({
-                        score: prevState.score + 100 /this.state.TotalQuestion
-                    }))
+                    this.state.score = this.state.score +5;
+                    console.log(this.state.score);
                 }
                 else {
                     console.log("bad")
@@ -107,15 +105,18 @@ export default class Music extends React.Component {
             }
 
         }
+        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score + "%")
+
         setTimeout(() => {
             console.log(this.state.score);
-            firebase.database().ref("Score/S").set(this.state.score + "%")
+            firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score + "%")
 
         }, 500)
 
         let a = this.state.count + 1
         this.setState({ count: a })
         if(!this.state.donors[a]){
+            console.log('correct');
            browserHistory.push('/result')
 
        }
@@ -143,7 +144,6 @@ timer = () => {
 
     var min = this.state.TotalTime
     var sec = 0;
-    console.log(min)
 
     setInterval(() => {
         var time;
@@ -193,8 +193,6 @@ componentWillMount() {
         })
     firebase.database().ref('UserInfo/').on('value', (data) => {
         let obj = data.val();
-        console.log(obj.Title)
-        console.log(data1['Questions']['Music']['Quiz1']);
         this.setState({
             Title: 'Music',
             Totalmarks: obj.Totalmarks,
@@ -211,10 +209,8 @@ componentWillMount() {
             for (var prop in obj) {
                 
                 ques.push(obj[prop]);
-                console.log(ques);
                 // console.log(don);
             }
-            console.log(ques[1].Question);
             let Question = data1['Questions']['Music']['Quiz1']['Question2']['Question'];
             let op1 = data1['Questions']['Music']['Quiz1']['Question2']['Answer'];
             let op2 = data1['Questions']['Music']['Quiz1']['Question2']['Answer3'];
