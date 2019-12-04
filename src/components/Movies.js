@@ -286,7 +286,7 @@ export default class Movies extends React.Component {
                                 <br />
                                 <br /><YoutubePlayer
                                     videoId={this.state.ID}
-                                    playbackState='playing'
+                                    playbackState='paused'
 
                                     configuration={
                                         {
