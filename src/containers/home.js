@@ -16,6 +16,7 @@ class LoginSignup extends Component {
                             <YoutubePlayer 
                                 videoId='48l92b0XxW4'
                                 playbackState='playing'
+
                                 configuration={
                                     {
 
