@@ -199,11 +199,7 @@ componentWillMount() {
             Title: 'Music',
             Totalmarks: obj.Totalmarks,
             TotalQuestion: obj.TotalQuestion,
-<<<<<<< HEAD
-            TotalTime: 5
-=======
             TotalTime: '5'
->>>>>>> 9f56a54d5dadb0ed679b3be2d3ca0a4fd9102986
         })
         this.timer()
 
