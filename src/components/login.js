@@ -6,6 +6,7 @@ import * as firebase from 'firebase'
 
 
 const style = {
+  //color: "#ff00f2",
   height: 300,
   width: 300,
   margin: "20px 0px 20px 0px",
@@ -13,11 +14,11 @@ const style = {
   display: 'inline-block',
 };
 const style1 = {
-   color: "rgb(0, 188, 212)",
+   color: "#ff2e97",
   
 };
 const style2 = {
-   color: "white",
+   color: "000000",
   
 };
 
@@ -58,7 +59,7 @@ class Login extends Component {
             <h1 style={style1}>Login</h1>
             <TextField type="email" hintText="UserEmail" floatingLabelText="Email" ref="txte" /> <br />
             <TextField type="password" hintText="Password" floatingLabelText="Password" ref="pass" /> <br />
-            <br /><RaisedButton onClick={this.login} primary={true}><span style={style2}> Login </span></RaisedButton><br />
+            <br /><RaisedButton onClick={this.login} primary={false} backgroundColor='#ff2e97'><span style={style2}> Login </span></RaisedButton><br />
           </Paper>
         </center>
          
@@ -67,4 +68,4 @@ class Login extends Component {
   }
 }
 
-export default Login;  
+export default Login; 

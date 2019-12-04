@@ -4,6 +4,7 @@ import { browserHistory } from 'react-router'
 import * as firebase from "firebase";
 import { RaisedButton, TextField } from 'material-ui';
 import Paper from 'material-ui/Paper';
+export {QuizDetail};
 
 const style = {
     height: 600,
@@ -16,6 +17,7 @@ const style2 = {
     color: "white",
 
 };
+const QuizDetail =[];
 export default class CreatQuiz extends React.Component {
     constructor(props) {
         super(props)
@@ -28,7 +30,8 @@ export default class CreatQuiz extends React.Component {
         const Passingmarks = this.refs.passmarks.getValue();
         const Time = this.refs.time.getValue();
          const totalquestion = this.refs.totalquestion.getValue();
-        let QuizDetail = {
+        QuizDetail = {
+            //User: firebase.auth().currentUser,
             Title: QuizTitle,
             Totalmarks: Totalmarks,
             Passingmarks: Passingmarks,
@@ -41,7 +44,14 @@ export default class CreatQuiz extends React.Component {
             alert("Please Fill Required Fields")
         }
         else {
-            firebase.database().ref('QuizDetail').set(QuizDetail);
+            console.log(firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes"));
+            firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/"+ QuizDetail.Title).update({QuizDetail});
+            console.log(firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Questions"));
+                // .on('value').then(function(dataS){
+                //     console.log(dataS);
+                // }));
+            // if (firebase.database().ref('UserInfo').on() === )
+            // firebase.database().ref('/QuizDetail').push(QuizDetail);
             browserHistory.push('/CreateQuestion')
         }
     }
@@ -53,7 +63,7 @@ export default class CreatQuiz extends React.Component {
                     <div>
                         <center>
                             <Paper style={style} zDepth={3} >
-                                <h1>Thanks for Creat Quiz!</h1>
+                                <h1>New Quiz!</h1>
                                 <TextField type="text" hintText="Title" floatingLabelText="Quiz Title" ref="quiztitle" /> <br />
                                 <TextField type="number" hintText="Total Marks" floatingLabelText="Total Marks" ref="totmarks" /> <br />
                                 <TextField type="number" hintText="Passing Marks" floatingLabelText="Passing Marks" ref="passmarks" /><br />

@@ -1,6 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import * as firebase from "firebase";
+import { Link } from 'react-router';
 import { RaisedButton } from 'material-ui';
 import Paper from 'material-ui/Paper';
 import { browserHistory } from 'react-router';
@@ -17,13 +18,13 @@ const style1 = {
 
 };
 const style = {
-    color: "green",
+    color: "#FFFFFF",
     fontSize: "20px",
     fontFamily: "Comic Sans MS"
 
 };
 const style7 = {
-    color: "#444",
+    color: "#FFFFFF",
     fontFamily: "Comic Sans MS"
 
 };
@@ -31,7 +32,7 @@ const style2 = {
     margin: "20px 0px 0px 0px",
     background: "#444",
     padding: "30px",
-    color: "#fff",
+    color: "#ffffff",
     fontSize: "20px",
     fontFamily: "Comic Sans MS"
 
@@ -202,7 +203,7 @@ componentWillMount() {
         this.timer()
 
     })
-    firebase.database().ref('QuizQuestion/').on('value', (data) => {
+    firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Questions/QuizQuestion").on('value', (data) => {
         let ques = [];
         let obj = data.val();
             // console.log(obj.op1)
@@ -210,7 +211,7 @@ componentWillMount() {
                 ques.push(obj[prop]);
                 // console.log(don);
             }
-            // console.log(ques[0].Question)
+            console.log(ques[1].Question);
             let Question = ques[0].Question;
             let op1 = ques[0].op1;
             let op2 = ques[0].op2;
@@ -238,6 +239,10 @@ componentWillMount() {
 render() {
         // console.log(this.state.TotalTime);
         return (
+            // <Link to="/Movies"><RaisedButton primary={true} ><span style={style}>Movies</span></RaisedButton></Link>
+            // <Link to="/Television"><RaisedButton primary={true} ><span style={style}>Television</span></RaisedButton></Link>
+            // <Link to="/Music"><RaisedButton primary={true} ><span style={style}>Music</span></RaisedButton></Link>
+
             <div>
             <MuiThemeProvider>
             <div>
@@ -247,6 +252,7 @@ render() {
             <span style={style}>{this.state.timer}</span>
 
             <h4 style={style2}>{this.state.Question}</h4>
+
             <br />
             <br />
             <div ref="val">
@@ -280,7 +286,11 @@ render() {
             </RadioButtonGroup>
 
             </div>
-            <FloatingActionButton style={stylee} onClick={this.loadQuestion}>
+            <FloatingActionButton style={style} onClick={this.loadQuestion}>
+
+            {/* <Link to="/Movies"><RaisedButton primary={false}><span style={style}>Movies</span></RaisedButton></Link> */}
+            {/* <Link to="/Television"><RaisedButton primary={false}><span style={style}>Television</span></RaisedButton></Link> */}
+            {/* <Link to="/Music"><RaisedButton primary={false} ><span style={style}>Music</span></RaisedButton></Link> */}
             <ContentAdd />
             </FloatingActionButton>
             </Paper>
@@ -289,6 +299,6 @@ render() {
             </div>
             </MuiThemeProvider>
             </div>
-            )
+        )
     }
 }
