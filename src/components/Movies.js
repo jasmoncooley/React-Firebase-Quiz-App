@@ -216,9 +216,9 @@ componentWillMount() {
             }
             var quesData = [];
             for (var i =0; i < 5; i++){
-                var rec = { question: "question" + i};
+                var rec = {Question: "Questions" + i};
                 rec = ques.round(ques.random() * 5);
-                }
+            }
             console.log(ques[1].Question);
             let Question = data1['Questions']['Movies']['Quiz1']['Question2']['Question'];
             let op1 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer'];
