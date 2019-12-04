@@ -3,6 +3,7 @@ import React from 'react';
  import * as firebase from "firebase";
  import { Link } from 'react-router';
  import { RaisedButton } from 'material-ui';
+ import { App } from 'material-ui';
  import Paper from 'material-ui/Paper';
  import { browserHistory } from 'react-router';
  import FloatingActionButton from 'material-ui/FloatingActionButton';
@@ -242,11 +243,9 @@ import React from 'react';
 
              <div>
              <MuiThemeProvider>
-             <div>
+             <div class= "verticalmenu">
              <center>
-             {/* <Paper style={style5} zDepth={3}> */}
-             {/* <h1 style={style7}>{this.state.Title} Quiz!</h1> */}
-             <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF'><span style={{margin: 52}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Movies"><RaisedButton>Movies</RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
              <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
@@ -254,46 +253,6 @@ import React from 'react';
 
              <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
 
-
-
-
-            
-            {/* <span style={style}>{this.state.timer}</span> */}
- 
-             {/* <h4 style={style2}>{this.state.Question}</h4> */}
- 
-             <br />
-             <br />
-             {/* <div ref="val">
-             <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
-             <RadioButton
-             value={this.state.op1}
-             label={this.state.op1}
-             style={styles.radioButton}
-             name="option"
-             />
- 
-             <RadioButton
-             value={this.state.op2}
-             label={this.state.op2}
-             style={styles.radioButton}
-             name="option"
-             />
-             <RadioButton
-             value={this.state.op3}
-             label={this.state.op3}
-             style={styles.radioButton}
-             name="option"
-             />
-             <RadioButton
-             value={this.state.op4}
-             label={this.state.op4}
-             style={styles.radioButton}
-             name="option"
-             />
- 
-             </RadioButtonGroup>
-  */}
              {/* </div> */}
              {/* <FloatingActionButton style={stylee} onClick={this.loadQuestion}> */}
              <ContentAdd /> 
