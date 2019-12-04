@@ -51,7 +51,7 @@ class Result extends React.Component {
                             <h1><font color="#ff2e97">Quiz Finished</font></h1>
                             <h1><font color="#ff2e97">Your Score {this.state.Score}</font></h1>
 
-                                { <div>
+                                 <div>
                                     <table style="width:100%">
                                         <tr>
                                             <th>Username</th>
@@ -62,7 +62,7 @@ class Result extends React.Component {
                                             <td>Smith</td>
                                         </tr>
                                         </table>
-                                </div>     }
+                                </div>     
 
                            
                         </div>
