@@ -271,34 +271,23 @@ export default class Movies extends React.Component {
                                 <br />
                                 <br />
                                 <div ref="val">
-                                    <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
-                                        <RadioButton
-                                            value={this.state.op1}
-                                            label={this.state.op1}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-
-                                        <RadioButton
-                                            value={this.state.op2}
-                                            label={this.state.op2}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-                                        <RadioButton
-                                            value={this.state.op3}
-                                            label={this.state.op3}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-                                        <RadioButton
-                                            value={this.state.op4}
-                                            label={this.state.op4}
-                                            style={styles.radioButton}
-                                            name="option"
-                                        />
-
-                                    </RadioButtonGroup>
+                                    <table style="width:100%">
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Age</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Jill</td>
+                                            <td>Smith</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eve</td>
+                                            <td>Jackson</td>
+                                            <td>94</td>
+                                        </tr>
+                                    </table>
 
                                 </div>
                                 <FloatingActionButton style={style} onClick={this.loadQuestion}>

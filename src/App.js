@@ -13,6 +13,7 @@ import Quizes from './components/Quizes'
 import Music from './components/Music'
 import Result from './components/result'
 import Movies from './components/Movies'
+import Leaderboard from './components/Leaderboard'
 import UserGenerated from './components/UserGenerated'
 
 
@@ -33,6 +34,7 @@ class App extends Component {
                     <Route path="result" component={Result} />
                     <Route path="Movies" component={Movies} />
                     <Route path="Music" component={Music} />
+                    <Route path="Leaderboard" component={Leaderboard} />
                     <Route path="UserGenerated" component={UserGenerated} />
                 </Route>
             </Router>
