@@ -79,12 +79,7 @@ export default class Movies extends React.Component {
             op3: "",
             op4: "",
             Ans: "",
-<<<<<<< HEAD
-            videoId: "",
-            timer: 0,
-=======
             //timer: 0,
->>>>>>> b42baec6b227126d681d84b93d89626e40139bc3
             Title: "",
             Totalmarks: "",
             TotalQuestion: "",
@@ -297,25 +292,8 @@ export default class Movies extends React.Component {
                                 <h1 style={style7}>{this.state.Title} Quiz!</h1>
                                 <span style={style}>{this.state.timer}</span>
 
-<<<<<<< HEAD
-                                <h4 style={style2}>{this.state.Question} 
-                            </h4>
-                            {/* <YoutubePlayer 
-                                videoId= 'string'
-                                playbackState='playing'
-
-                                configuration={
-                                    {
-
-                                        showinfo: 0,
-                                        controls: 0
-                                    }
-                                }
-                            /> */}
-=======
                                 <h4 style={style2}>{this.state.Question}
                                 </h4>
->>>>>>> b42baec6b227126d681d84b93d89626e40139bc3
                                 <br />
                                 <br />
                                 <div ref="val">
