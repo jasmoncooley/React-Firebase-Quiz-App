@@ -219,15 +219,20 @@ componentWillMount() {
                 rec = Math.round(Math.random() * 5);
                 console.log(typeof rec);
             }
-            const que = 'Question'+ rec;
-            console.log(que);
-            let Question = data1['Questions']['Movies']['Quiz1'][que]['Question'];
-            let op1 = data1['Questions']['Movies']['Quiz1'][que]['Answer'];
-            let op2 = data1['Questions']['Movies']['Quiz1'][que]['Answer3'];
-            let op3 = data1['Questions']['Movies']['Quiz1'][que]['Answer2'];
-            let op4 = data1['Questions']['Movies']['Quiz1'][que]['Answer4'];
-            let Ans = data1['Questions']['Movies']['Quiz1'][que]['Correct Answer'];
-
+            do {
+                Question += "new question" + que;
+                que++;
+            }
+            while (que < 5) {
+                const que = 'Question'+ rec;
+                console.log(que);
+                let Question = data1['Questions']['Movies']['Quiz1'][que]['Question'];
+                let op1 = data1['Questions']['Movies']['Quiz1'][que]['Answer'];
+                let op2 = data1['Questions']['Movies']['Quiz1'][que]['Answer3'];
+                let op3 = data1['Questions']['Movies']['Quiz1'][que]['Answer2'];
+                let op4 = data1['Questions']['Movies']['Quiz1'][que]['Answer4'];
+                let Ans = data1['Questions']['Movies']['Quiz1'][que]['Correct Answer'];
+            }
             // let ans = ques[0].Answer;
             this.setState({
                 Question: Question,
