@@ -22,3 +22,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.verticalmenu {
+  text-align: center;
+  margin-top: 300px;
+  border: 2px solid #ff2e97;
+  background: #ffffff;
+  padding: 10px 15px;
+  font-size: 20px;
+  margin: 10px;
+}
