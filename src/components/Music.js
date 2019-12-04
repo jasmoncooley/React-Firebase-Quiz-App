@@ -96,11 +96,10 @@ export default class Music extends React.Component {
                 console.log(radios[i].value)
                 if (this.state.Ans === radios[i].value) {
                     firebase.database().ref('UserInfo/' + firebase.auth().currentUser.uid + '/Quizzes/Score').on('value', (data) => {
-                        console.log(typeof data.val())
                         this.state.score = parseInt(data.val())
                     })
-                    console.log(typeof this.state.score);
                     this.state.score = this.state.score + 5;
+                    firebase.database().ref("UserInfo/" + firebase.auth().currentUser.uid + "/Quizzes/Score").set(this.state.score)
                     console.log(this.state.score);
                 }
                 else {
@@ -110,7 +109,6 @@ export default class Music extends React.Component {
             }
 
         }
-        firebase.database().ref("UserInfo/" + firebase.auth().currentUser.uid + "/Quizzes/Score").set(this.state.score)
 
         setTimeout(() => {
             console.log(this.state.score);
@@ -121,8 +119,13 @@ export default class Music extends React.Component {
         let a = this.state.count + 1
         this.setState({ count: a })
         if (!this.state.donors[a]) {
-            console.log('correct');
-            browserHistory.push('/result')
+            if (data1['Redirects'] < 3) {
+                browserHistory.push('/Movies')
+            }
+            else if (data1['Redirects'] = 3) {
+                data1['Redirects'] = 0;
+                browserHistory.push('/result')
+            }
 
         }
         else {
@@ -216,17 +219,14 @@ export default class Music extends React.Component {
                 ques.push(obj[prop]);
                 // console.log(don);
             }
-            //for (var i =1; i <= 6; i++){
+
             // var rec = {Question: "Questions" + i};
-
             var rec = Math.round(Math.random() * 5);
-
-            if (rec = 0) {
-                var rec = Math.round(Math.random() * 5);
-                console.log(typeof rec);
+            if (rec == 0) {
+                rec = Math.round(Math.random() * 5);
             }
+            console.log(rec);
 
-            //}
             const que = 'Question' + rec;
             let Question = data1['Questions']['Music']['Quiz1'][que]['Question'];
             let op1 = data1['Questions']['Music']['Quiz1'][que]['Answer'];
