@@ -180,7 +180,7 @@ componentWillMount() {
 
     var don = [];
 
-    firebase.database().ref('QuizQuestion/').on('value', (data) => {
+    firebase.database().ref('Quiz Question/').on('value', (data) => {
         let obj = data.val();
             // console.log(obj);
             for (var prop in obj) {

@@ -9,6 +9,7 @@ import ContentAdd from 'material-ui/svg-icons/action/done';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
+import data1 from '../questions.json';
 
 
 const style1 = {
@@ -89,8 +90,8 @@ export default class Movies extends React.Component {
     }
 
     loadQuestion() {
-
         var radios = document.getElementsByName('option');
+        console.log(radios);
         for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
                 console.log(radios[i].value)
@@ -179,7 +180,7 @@ componentWillMount() {
 
     var don = [];
 
-    firebase.database().ref('QuizQuestion/').on('value', (data) => {
+    firebase.database().ref('Quiz Question/').on('value', (data) => {
         let obj = data.val();
             // console.log(obj);
             for (var prop in obj) {
@@ -190,19 +191,20 @@ componentWillMount() {
                 })
             }
         })
-    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/1/QuizDetail').on('value', (data) => {
+    firebase.database().ref('UserInfo/').on('value', (data) => {
         let obj = data.val();
         console.log(obj.Title)
+        console.log(data1['Questions']['Movies']['Quiz1']);
         this.setState({
-            Title: obj.Title,
+            Title: 'Movies',
             Totalmarks: obj.Totalmarks,
             TotalQuestion: obj.TotalQuestion,
-            TotalTime: obj.Totaltime
+            TotalTime: '5'
         })
         this.timer()
 
     })
-    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/1/Questions/QuizQuestion').on('value', (data) => {
+    firebase.database().ref('UserInfo/').on('value', (data) => {
         let ques = [];
         let obj = data.val();
             // console.log(obj.op1)
@@ -213,12 +215,12 @@ componentWillMount() {
                 // console.log(don);
             }
             console.log(ques[1].Question);
-            let Question = ques[0];
-            let op1 = ques[1];
-            let op2 = ques[2];
-            let op3 = ques[3];
-            let op4 = ques[4];
-            let Ans = ques[5];
+            let Question = data1['Questions']['Movies']['Quiz1']['Question2']['Question'];
+            let op1 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer'];
+            let op2 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer3'];
+            let op3 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer2'];
+            let op4 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer4'];
+            let Ans = data1['Questions']['Movies']['Quiz1']['Question2']['Correct Answer'];
 
             // let ans = ques[0].Answer;
             this.setState({
@@ -282,7 +284,7 @@ render() {
             </RadioButtonGroup>
 
             </div>
-            <FloatingActionButton style={stylee} onClick={this.loadQuestion}>
+            <FloatingActionButton style={style} onClick={this.loadQuestion}>
             <ContentAdd />
             </FloatingActionButton>
             </Paper>
