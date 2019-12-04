@@ -18,13 +18,13 @@ const style1 = {
 
 };
 const style = {
-    color: "green",
+    color: "#FFFFFF",
     fontSize: "20px",
     fontFamily: "Comic Sans MS"
 
 };
 const style7 = {
-    color: "#444",
+    color: "#FFFFFF",
     fontFamily: "Comic Sans MS"
 
 };
@@ -32,7 +32,7 @@ const style2 = {
     margin: "20px 0px 0px 0px",
     background: "#444",
     padding: "30px",
-    color: "#fff",
+    color: "#ffffff",
     fontSize: "20px",
     fontFamily: "Comic Sans MS"
 
@@ -288,9 +288,9 @@ render() {
             </div>
             <FloatingActionButton style={stylee} onClick={this.loadQuestion}>
 
-            <Link to="/Movies"><RaisedButton primary={true} ><span style={style}>Movies</span></RaisedButton></Link>
-            <Link to="/Television"><RaisedButton primary={true} ><span style={style}>Television</span></RaisedButton></Link>
-            <Link to="/Music"><RaisedButton primary={true} ><span style={style}>Music</span></RaisedButton></Link>
+            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={style}>Movies</span></RaisedButton></Link>
+            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={style}>Television</span></RaisedButton></Link>
+            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={style}>Music</span></RaisedButton></Link>
             <ContentAdd />
             </FloatingActionButton>
             </Paper>
