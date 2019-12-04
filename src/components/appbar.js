@@ -12,10 +12,14 @@ class Bar extends Component {
       super(props);
         
       this.state = {
-         value: "Signup",
+         value: "Log-In",
       }
    }
-    
+    home(ev){
+        ev.preventDefault();      
+        browserHistory.push('/Start')
+
+    }
       signout(ev) {
         ev.preventDefault();      
             console.log("Sign out successful"),
@@ -27,7 +31,7 @@ class Bar extends Component {
             <div>
                 <MuiThemeProvider>
                     <div>
-                        <AppBar title="The Pre-Game" style={style} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signout} />} />
+                        <AppBar title="The Pre-Game" style={style} iconElementLeft={<FlatButton label={'Home'}  onClick={this.home} />} iconElementRight={<FlatButton label={this.state.value}  onClick={this.signout} />} />
                     </div>
                 </MuiThemeProvider>
                 {this.props.children}
