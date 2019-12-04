@@ -250,7 +250,13 @@ import React from 'react';
 
              <Link to="/Television"><RaisedButton primary={true} ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Music"><RaisedButton primary={true} ><span style={{margin: 50}}>Music</span></RaisedButton></Link>
+             <Link to="/Music"><RaisedButton primary={true} ><span style={{margin: 50}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+
+             <Link to="/UserGenerated"><RaisedButton primary={true} ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
+
+
+
+
             
             {/* <span style={style}>{this.state.timer}</span> */}
  
