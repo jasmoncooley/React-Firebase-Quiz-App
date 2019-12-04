@@ -207,7 +207,7 @@ export default class Music extends React.Component {
                 Title: 'Music',
                 Totalmarks: obj.Totalmarks,
                 TotalQuestion: obj.TotalQuestion,
-                TotalTime: '5'
+                TotalTime: '1'
             })
             this.timer()
 
