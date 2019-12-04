@@ -58,10 +58,10 @@ class Result extends React.Component {
         //         top[i]=dict[key]
         //         i=i+1
         //     }
-        }
+        //}
 
 
-}
+
 
     render() {
       
@@ -79,6 +79,7 @@ class Result extends React.Component {
                 </MuiThemeProvider>
             </div>
         )
+    }
     
 }
 export default Result;
