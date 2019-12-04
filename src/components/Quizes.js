@@ -3,6 +3,7 @@ import React from 'react';
  import * as firebase from "firebase";
  import { Link } from 'react-router';
  import { RaisedButton } from 'material-ui';
+ import { App } from 'material-ui';
  import Paper from 'material-ui/Paper';
  import { browserHistory } from 'react-router';
  import FloatingActionButton from 'material-ui/FloatingActionButton';
