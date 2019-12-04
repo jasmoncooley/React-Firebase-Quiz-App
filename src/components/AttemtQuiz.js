@@ -286,11 +286,11 @@ render() {
             </RadioButtonGroup>
 
             </div>
-            <FloatingActionButton style={stylee} onClick={this.loadQuestion}>
+            <FloatingActionButton style={style} onClick={this.loadQuestion}>
 
-            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={style}>Movies</span></RaisedButton></Link>
-            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={style}>Television</span></RaisedButton></Link>
-            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={style}>Music</span></RaisedButton></Link>
+            <Link to="/Movies"><RaisedButton primary={false}><span style={style}>Movies</span></RaisedButton></Link>
+            <Link to="/Television"><RaisedButton primary={false}><span style={style}>Television</span></RaisedButton></Link>
+            <Link to="/Music"><RaisedButton primary={false} ><span style={style}>Music</span></RaisedButton></Link>
             <ContentAdd />
             </FloatingActionButton>
             </Paper>
