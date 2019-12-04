@@ -191,7 +191,7 @@ componentWillMount() {
                 })
             }
         })
-    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/1/QuizDetail').on('value', (data) => {
+    firebase.database().ref('UserInfo/').on('value', (data) => {
         let obj = data.val();
         console.log(obj.Title)
         console.log(data1['Questions']['Music']['Quiz1']);
@@ -204,7 +204,7 @@ componentWillMount() {
         this.timer()
 
     })
-    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/1/Questions/QuizQuestion').on('value', (data) => {
+    firebase.database().ref('UserInfo/').on('value', (data) => {
         let ques = [];
         let obj = data.val();
             // console.log(obj.op1)
