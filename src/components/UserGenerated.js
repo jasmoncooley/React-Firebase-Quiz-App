@@ -63,7 +63,7 @@ const styles = {
 };
 
 
-componentWillMount() {
+componentWillMount(); {
  
     var don = [];
 
@@ -121,7 +121,7 @@ componentWillMount() {
 }
 
 
-render() {
+render(); {
     // console.log(this.state.TotalTime);
     return (
         <div>
@@ -189,5 +189,5 @@ render() {
         </div>
     )
 }
-}
+
 
