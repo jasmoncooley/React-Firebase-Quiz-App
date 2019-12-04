@@ -32,13 +32,36 @@ class Result extends React.Component {
                 username: data.val()
             })
         })
+        firebase.database().ref('UserInfo/Max_Score').on('value',(data)=>{
+            console.log(data.val())
+        })
     }
    
-    computeLeaderboard(){
-        var dict = {}
-        dict[this.state.username] = this.state.Score;
-    }
+    // computeLeaderboard(){
+    //     var dict = {}
+    //     dict[this.state.username] = this.state.Score;
+    //     if (dict[this.state.username]>maxScore){
+    //         updateSingleData(maxScore){
+    //         }
+    //     }
 
+        // updateSingleData(maxScore){
+        //     firebase.database().ref('/').update({
+        //         maxScore,
+        //     });
+        // }
+        // var max=0
+        // var i=0
+        // var top = [];
+        // for (var key in dict){
+        //     if(dict[key]>max){
+        //         top[i]=dict[key]
+        //         i=i+1
+        //     }
+        }
+
+
+}
 
     render() {
       
@@ -50,23 +73,12 @@ class Result extends React.Component {
 
                             <h1><font color="#ff2e97">Quiz Finished</font></h1>
                             <h1><font color="#ff2e97">Your Score {this.state.Score}</font></h1>
-                                <div>
-                                  
-                                     <table style="width:100%">
-                                        <tr>
-                                            <th>Firstname</th>
-                                            <th>Lastname</th>
-                                            <th>Age</th>
-                                        </tr>
-                                    {/* <h1><font color="#ff2e97">The player {this.state.username} has the highest score {this.state.Score}</font></h1> */} */}
-                                    </table>
-                                </div>
-                
+                                
                         </div>
                     </center>
                 </MuiThemeProvider>
             </div>
         )
-    }
+    
 }
 export default Result;
