@@ -11,7 +11,6 @@ import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import data1 from '../questions.json';
 
-
 const style1 = {
     float: "right",
     padding: "0px 20px 0px 20px"
@@ -215,17 +214,19 @@ componentWillMount() {
                 // console.log(don);
             }
             var quesData = [];
-            for (var i =0; i < 5; i++){
+            for (var i =1; i <= 6; i++){
                 var rec = {Question: "Questions" + i};
-                rec = ques.round(ques.random() * 5);
+                rec = Math.round(Math.random() * 5);
+                console.log(typeof rec);
             }
-            console.log(ques[1].Question);
-            let Question = data1['Questions']['Movies']['Quiz1']['Question2']['Question'];
-            let op1 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer'];
-            let op2 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer3'];
-            let op3 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer2'];
-            let op4 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer4'];
-            let Ans = data1['Questions']['Movies']['Quiz1']['Question2']['Correct Answer'];
+            const que = 'Question'+ rec;
+            console.log(que);
+            let Question = data1['Questions']['Movies']['Quiz1'][que]['Question'];
+            let op1 = data1['Questions']['Movies']['Quiz1'][que]['Answer'];
+            let op2 = data1['Questions']['Movies']['Quiz1'][que]['Answer3'];
+            let op3 = data1['Questions']['Movies']['Quiz1'][que]['Answer2'];
+            let op4 = data1['Questions']['Movies']['Quiz1'][que]['Answer4'];
+            let Ans = data1['Questions']['Movies']['Quiz1'][que]['Correct Answer'];
 
             // let ans = ques[0].Answer;
             this.setState({
