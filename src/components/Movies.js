@@ -216,7 +216,7 @@ componentWillMount() {
             }
             var quesData = [];
             for (var i =0; i < 5; i++){
-                var rec = { question: "Questions" + i};
+                var rec = {Question: "Questions" + i};
                 rec = ques.round(ques.random() * 5);
             }
             console.log(ques[1].Question);
