@@ -216,11 +216,11 @@ componentWillMount() {
             }
             console.log(ques[1].Question);
             let Question = data1['Questions']['Movies']['Quiz1']['Question2']['Question'];
-            let op1 = data1['Questions']['Movie']['Quiz1']['Question2']['Answer'];
-            let op2 = data1['Questions']['Movie']['Quiz1']['Question2']['Answer3'];
-            let op3 = data1['Questions']['Movie']['Quiz1']['Question2']['Answer2'];
-            let op4 = data1['Questions']['Movie']['Quiz1']['Question2']['Answer4'];
-            let Ans = data1['Questions']['Movie']['Quiz1']['Question2']['Correct Answer'];
+            let op1 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer'];
+            let op2 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer3'];
+            let op3 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer2'];
+            let op4 = data1['Questions']['Movies']['Quiz1']['Question2']['Answer4'];
+            let Ans = data1['Questions']['Movies']['Quiz1']['Question2']['Correct Answer'];
 
             // let ans = ques[0].Answer;
             this.setState({
