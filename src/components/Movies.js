@@ -95,14 +95,27 @@ export default class Movies extends React.Component {
         var radios = document.getElementsByName('shipSpeed');
         for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
-                console.log(radios[i].value)
                 if (this.state.Ans === radios[i].value) {
+                    // console.log('t');
                     firebase.database().ref('UserInfo/' + firebase.auth().currentUser.uid + '/Quizzes/Score').on('value', (data) => {
-                        this.state.score = parseInt(data.val())
+                        if (data.val() === null) {
+                            this.state.score = '0';
+                            this.state.score = parseInt(this.state.score)
+                            this.state.score = this.state.score + 5;
+                        }
+                        else {
+                            this.state.score = parseInt(data.val())
+                            this.state.score = this.state.score + 5;
+                            // break;
+                        }
+                        // this.state.score = this.state.score + 5;
+
+
+
                     })
-                    this.state.score = this.state.score + 5;
-                    firebase.database().ref("UserInfo/" + firebase.auth().currentUser.uid + "/Quizzes/Score").set(this.state.score)
-                    // console.log(this.state.score);
+                    console.log(this.state.score);
+                    firebase.database().ref('UserInfo/' + firebase.auth().currentUser.uid + '/Quizzes/Score').set(this.state.score)
+
                 }
                 else {
                     console.log("bad")
@@ -111,7 +124,7 @@ export default class Movies extends React.Component {
             }
 
         }
-        
+
 
         // setTimeout(() => {
         //     console.log(this.state.score);
@@ -119,15 +132,14 @@ export default class Movies extends React.Component {
 
         // }, 500)
 
-        let a = this.state.count + 1
-        this.setState({ count: a })
+        // let a = this.state.count + 1
+        // this.setState({ count: a })
         // console.log(this.state.donors[a])
         // if (!this.state.donors[a]) {
         console.log(data1['Questions']['Redirects'])
         if (data1['Questions']['Redirects'] < 4) {
             data1['Questions']['Redirects'] = parseInt(data1['Questions']['Redirects'])
             data1['Questions']['Redirects'] += 1
-            console.log(typeof data1['Questions']['Redirects'])
             browserHistory.push('/Movies')
         }
         else if (data1['Questions']['Redirects'] >= 3) {
@@ -226,16 +238,16 @@ export default class Movies extends React.Component {
             for (var prop in obj) {
 
                 ques.push(obj[prop]);
-                
+
                 // console.log(don);
             }
 
             // var rec = {Question: "Questions" + i};
             var rec = Math.round(Math.random() * 5);
-            
+
             if (rec == 0) {
                 rec = Math.round(Math.random() * 5);
-            
+
             }
             // console.log(rec);
 
@@ -273,8 +285,8 @@ export default class Movies extends React.Component {
                                 <h1 style={style7}>{this.state.Title} Quiz!</h1>
                                 <span style={style}>{this.state.timer}</span>
 
-                                <h4 style={style2}>{this.state.Question} 
-                            </h4>
+                                <h4 style={style2}>{this.state.Question}
+                                </h4>
                                 <br />
                                 <br />
                                 <div ref="val">
@@ -313,11 +325,11 @@ export default class Movies extends React.Component {
                                 </FloatingActionButton>
                             </Paper>
                         </center>
-                        
+
 
                     </div>
                 </MuiThemeProvider>
-    
+
             </div>
         )
     }

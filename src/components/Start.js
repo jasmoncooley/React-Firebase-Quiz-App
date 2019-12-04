@@ -52,7 +52,7 @@ class Start extends React.Component {
 
                             <h1 ref="val"><font color="#ff2e97">Quiz App</font></h1>
 
-                            <Link to="/CreateQuiz"><RaisedButton primary={false} style={{ fontSize: 32}} backgroundColor='#ff2e97' ><span style={{margin: 52}}>Create Questions</span></RaisedButton></Link>&nbsp;&nbsp;
+                            <Link to="/CreatQuiz"><RaisedButton primary={false} style={{ fontSize: 32}} backgroundColor='#ff2e97' ><span style={{margin: 52}}>Create Questions</span></RaisedButton></Link>&nbsp;&nbsp;
                             <RaisedButton onClick={this.next} type="submit" primary={false} style={{fontSize: 32}} backgroundColor='#ff2e97' ><span style={{margin: 52}}>Choose Your Game</span></RaisedButton>
 
                         </div>

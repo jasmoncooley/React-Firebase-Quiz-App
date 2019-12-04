@@ -64,7 +64,7 @@ const styles = {
     },
 };
 
-export default class Movies extends React.Component {
+export default class Leaderboard extends React.Component {
 
     constructor(props) {
         super(props);
@@ -242,14 +242,14 @@ export default class Movies extends React.Component {
             let Ans = data1['Questions']['Movies']['Quiz1'][que]['Correct Answer'];
 
             // let ans = ques[0].Answer;
-            this.setState({
-                Question: Question,
-                op1: op1,
-                op2: op2,
-                op3: op3,
-                op4: op4,
-                Ans: Ans
-            })
+            // this.setState({
+            //     Question: Question,
+            //     op1: op1,
+            //     op2: op2,
+            //     op3: op3,
+            //     op4: op4,
+            //     Ans: Ans
+            // })
 
         })
 

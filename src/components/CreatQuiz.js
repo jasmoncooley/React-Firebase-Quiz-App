@@ -45,7 +45,7 @@ export default class CreatQuiz extends React.Component {
         }
         else {
             console.log(firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes"));
-            firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/"+ QuizDetail.Title).update({QuizDetail});
+            // firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/").update({QuizDetail});
             console.log(firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Questions"));
                 // .on('value').then(function(dataS){
                 //     console.log(dataS);
