@@ -9,7 +9,7 @@ import ContentAdd from 'material-ui/svg-icons/action/done';
 import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
-import data1 from '../question.json';
+import data1 from './question.json';
 
 
 const style1 = {
@@ -207,7 +207,7 @@ export default class Music extends React.Component {
                 Title: 'Music',
                 Totalmarks: obj.Totalmarks,
                 TotalQuestion: obj.TotalQuestion,
-                TotalTime: '5'
+                TotalTime: '1'
             })
             this.timer()
 
