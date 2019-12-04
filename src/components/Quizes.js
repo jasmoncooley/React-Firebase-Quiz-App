@@ -242,27 +242,21 @@ import React from 'react';
          return (
 
              <div>
-             <MuiThemeProvider>
-             <div class= "verticalmenu">
-             <center>
-             <Link to="/Movies"><RaisedButton>Movies</RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                <MuiThemeProvider>
+                    <div >
+                        <center>
+                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;
 
-             <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;
 
-             <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Music</span></RaisedButton></Link>&nbsp;
 
-             <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
-
-             {/* </div> */}
-             {/* <FloatingActionButton style={stylee} onClick={this.loadQuestion}> */}
-             <ContentAdd /> 
-             {/* </FloatingActionButton> */}
-             {/* </Paper> */}
-             </center>
- 
-             </div>
-             </MuiThemeProvider>
-             </div>
+                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>User Questions</span></RaisedButton></Link>&nbsp;&nbsp;
+                                        <ContentAdd /> 
+                            </center>
+                        </div>
+                </MuiThemeProvider>
+                </div>
          )
      }
  }
