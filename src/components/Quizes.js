@@ -242,7 +242,7 @@ import React from 'react';
 
              <div>
              <MuiThemeProvider>
-             <div>
+             <div class="vertical-menu">
              <center>
              {/* <Paper style={style5} zDepth={3}> */}
              {/* <h1 style={style7}>{this.state.Title} Quiz!</h1> */}
@@ -253,17 +253,8 @@ import React from 'react';
              <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
              <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
-
-
-
-
-            
-            {/* <span style={style}>{this.state.timer}</span> */}
- 
-             {/* <h4 style={style2}>{this.state.Question}</h4> */}
- 
-             <br />
-             <br />
+             {/* <br />
+             <br /> */}
              {/* <div ref="val">
              <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
              <RadioButton
