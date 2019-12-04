@@ -252,8 +252,6 @@ export default class Movies extends React.Component {
     }
 
 
-
-
     render() {
         // console.log(this.state.TotalTime);
         return (
