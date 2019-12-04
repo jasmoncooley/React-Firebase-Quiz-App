@@ -203,7 +203,7 @@ componentWillMount() {
         this.timer()
 
     })
-    firebase.database().ref('QuizQuestion/').on('value', (data) => {
+    firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Questions/QuizQuestion").on('value', (data) => {
         let ques = [];
         let obj = data.val();
             // console.log(obj.op1)
