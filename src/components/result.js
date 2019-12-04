@@ -52,8 +52,14 @@ class Result extends React.Component {
                             <h1><font color="#ff2e97">Your Score {this.state.Score}</font></h1>
                                 <div>
                                   
-                                    <h1><font color="#ff2e97">The player {this.state.username} has the highest score {this.state.Score}</font></h1>
-                                
+                                     <table style="width:100%">
+                                        <tr>
+                                            <th>Firstname</th>
+                                            <th>Lastname</th>
+                                            <th>Age</th>
+                                        </tr>
+                                    {/* <h1><font color="#ff2e97">The player {this.state.username} has the highest score {this.state.Score}</font></h1> */} */}
+                                    </table>
                                 </div>
                 
                         </div>
