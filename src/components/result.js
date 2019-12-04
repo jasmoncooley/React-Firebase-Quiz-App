@@ -50,19 +50,9 @@ class Result extends React.Component {
 
                             <h1><font color="#ff2e97">Quiz Finished</font></h1>
                             <h1><font color="#ff2e97">Your Score {this.state.Score}</font></h1>
-
-                                 <div>
-                                    <table style="width:100%">
-                                        <tr>
-                                            <th>Username</th>
-                                            <th>Score</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Jill</td>
-                                            <td>Smith</td>
-                                        </tr>
-                                        </table>
-                                </div>     
+                            <br>
+                            <h1>font color="#ff2e97">{this.state.username} has the highest score {this.state.Score}</h1>
+                            </br>  
 
                            
                         </div>
