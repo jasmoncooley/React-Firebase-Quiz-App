@@ -10,9 +10,10 @@ class Result extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            Score: ""
+            Score: "",
+            username:""
 
-        }
+        }  
     }
 
      componentWillMount() {
@@ -24,15 +25,16 @@ class Result extends React.Component {
                 Score: data.val(),
             })
         })
-        // firebase.database().ref('Leaderboard/'+firebase.auth().currentUser.uid+'/Quizzes/Score').on('value', (data) => {
-        //     console.log(data.val())
-
-        //     this.setState({
-        //         score: data.val()
-        //     })
-        // })
     }
    
+    // computeLeaderboard(){
+    //     var dict = {}
+    //     dict[] = this.state.Score;
+
+
+    //}
+
+
     render() {
       
         return (
