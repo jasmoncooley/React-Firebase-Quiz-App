@@ -6,7 +6,7 @@ import Paper from 'material-ui/Paper';
 import { browserHistory } from 'react-router';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/action/done';
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import data1 from '../questions.json';
@@ -49,19 +49,19 @@ const style5 = {
     display: 'inline-block',
 };
 const stylee = {
-  marginLeft: "80%",
-  marginBottom: "3%",
+    marginLeft: "80%",
+    marginBottom: "3%",
 };
 const styles = {
-  block: {
-    maxWidth: 25,
-    
-},
-radioButton: {
-    marginBottom: 16,
-    textAlign: "left",
-    marginLeft: 30
-},
+    block: {
+        maxWidth: 25,
+
+    },
+    radioButton: {
+        marginBottom: 16,
+        textAlign: "left",
+        marginLeft: 30
+    },
 };
 
 export default class Music extends React.Component {
@@ -95,12 +95,11 @@ export default class Music extends React.Component {
             if (radios[i].checked) {
                 console.log(radios[i].value)
                 if (this.state.Ans === radios[i].value) {
-                    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/Score').on('value', (data) => {
-                        console.log(typeof data.val())
+                    firebase.database().ref('UserInfo/' + firebase.auth().currentUser.uid + '/Quizzes/Score').on('value', (data) => {
                         this.state.score = parseInt(data.val())
                     })
-                    console.log(typeof this.state.score);
-                    this.state.score = this.state.score +5;
+                    this.state.score = this.state.score + 5;
+                    firebase.database().ref("UserInfo/" + firebase.auth().currentUser.uid + "/Quizzes/Score").set(this.state.score)
                     console.log(this.state.score);
                 }
                 else {
@@ -110,7 +109,6 @@ export default class Music extends React.Component {
             }
 
         }
-        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score)
 
         setTimeout(() => {
             console.log(this.state.score);
@@ -120,38 +118,43 @@ export default class Music extends React.Component {
 
         let a = this.state.count + 1
         this.setState({ count: a })
-        if(!this.state.donors[a]){
-            console.log('correct');
-           browserHistory.push('/result')
+        if (!this.state.donors[a]) {
+            if (data1['Redirects'] < 3) {
+                browserHistory.push('/Movies')
+            }
+            else if (data1['Redirects'] = 3) {
+                data1['Redirects'] = 0;
+                browserHistory.push('/result')
+            }
 
-       }
-       else{
-        let Question = this.state.donors[a].Question;
-        let op1 = this.state.donors[a].op1;
-        let op2 = this.state.donors[a].op2;
-        let op3 = this.state.donors[a].op3;
-        let op4 = this.state.donors[a].op4;
-        let Ans = this.state.donors[a].Answer;
-        
-        // let ans = this.state.donors[a].Answer;
-        this.setState({
-            Question: Question,
-            op1: op1,
-            op2: op2,
-            op3: op3,
-            op4: op4,
-            Ans: Ans
-        })
+        }
+        else {
+            let Question = this.state.donors[a].Question;
+            let op1 = this.state.donors[a].op1;
+            let op2 = this.state.donors[a].op2;
+            let op3 = this.state.donors[a].op3;
+            let op4 = this.state.donors[a].op4;
+            let Ans = this.state.donors[a].Answer;
+
+            // let ans = this.state.donors[a].Answer;
+            this.setState({
+                Question: Question,
+                op1: op1,
+                op2: op2,
+                op3: op3,
+                op4: op4,
+                Ans: Ans
+            })
+        }
+
     }
+    timer = () => {
 
-}
-timer = () => {
+        var min = this.state.TotalTime
+        var sec = 0;
 
-    var min = this.state.TotalTime
-    var sec = 0;
-
-    setInterval(() => {
-        var time;
+        setInterval(() => {
+            var time;
             // if (min < 10 && sec < 10) {
             //     time = "0" + min + ":" + "0" + sec;
             // }
@@ -179,14 +182,14 @@ timer = () => {
                 timer: time,
             })
         }, 1000)
-}
+    }
 
-componentWillMount() {
+    componentWillMount() {
 
-    var don = [];
+        var don = [];
 
-    firebase.database().ref('Quiz Question/').on('value', (data) => {
-        let obj = data.val();
+        firebase.database().ref('Quiz Question/').on('value', (data) => {
+            let obj = data.val();
             // console.log(obj);
             for (var prop in obj) {
                 don.push(obj[prop]);
@@ -196,32 +199,35 @@ componentWillMount() {
                 })
             }
         })
-    firebase.database().ref('UserInfo/').on('value', (data) => {
-        let obj = data.val();
-        this.setState({
-            Title: 'Music',
-            Totalmarks: obj.Totalmarks,
-            TotalQuestion: obj.TotalQuestion,
-            TotalTime: '5'
-        })
-        this.timer()
+        firebase.database().ref('UserInfo/').on('value', (data) => {
+            let obj = data.val();
+            this.setState({
+                Title: 'Music',
+                Totalmarks: obj.Totalmarks,
+                TotalQuestion: obj.TotalQuestion,
+                TotalTime: '5'
+            })
+            this.timer()
 
-    })
-    firebase.database().ref('UserInfo/').on('value', (data) => {
-        let ques = [];
-        let obj = data.val();
+        })
+        firebase.database().ref('UserInfo/').on('value', (data) => {
+            let ques = [];
+            let obj = data.val();
             // console.log(obj.op1)
             for (var prop in obj) {
-                
+
                 ques.push(obj[prop]);
                 // console.log(don);
             }
-            for (var i =1; i <= 6; i++){
-                // var rec = {Question: "Questions" + i};
-                var rec = Math.round(Math.random() * 5);
-                console.log(typeof rec);
+
+            // var rec = {Question: "Questions" + i};
+            var rec = Math.round(Math.random() * 5);
+            if (rec == 0) {
+                rec = Math.round(Math.random() * 5);
             }
-            const que = 'Question'+ rec;
+            console.log(rec);
+
+            const que = 'Question' + rec;
             let Question = data1['Questions']['Music']['Quiz1'][que]['Question'];
             let op1 = data1['Questions']['Music']['Quiz1'][que]['Answer'];
             let op2 = data1['Questions']['Music']['Quiz1'][que]['Answer3'];
@@ -241,65 +247,65 @@ componentWillMount() {
 
         })
 
-}
+    }
 
 
 
 
-render() {
+    render() {
         // console.log(this.state.TotalTime);
         return (
             <div>
-            <MuiThemeProvider>
-            <div>
-            <center>
-            <Paper style={style5} zDepth={3}>
-            <h1 style={style7}>{this.state.Title} Quiz!</h1>
-            <span style={style}>{this.state.timer}</span>
+                <MuiThemeProvider>
+                    <div>
+                        <center>
+                            <Paper style={style5} zDepth={3}>
+                                <h1 style={style7}>{this.state.Title} Quiz!</h1>
+                                <span style={style}>{this.state.timer}</span>
 
-            <h4 style={style2}>{this.state.Question}</h4>
-            <br />
-            <br />
-            <div ref="val">
-            <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
-            <RadioButton
-            value={this.state.op1}
-            label={this.state.op1}
-            style={styles.radioButton}
-            name="option"
-            />
+                                <h4 style={style2}>{this.state.Question}</h4>
+                                <br />
+                                <br />
+                                <div ref="val">
+                                    <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
+                                        <RadioButton
+                                            value={this.state.op1}
+                                            label={this.state.op1}
+                                            style={styles.radioButton}
+                                            name="option"
+                                        />
 
-            <RadioButton
-            value={this.state.op2}
-            label={this.state.op2}
-            style={styles.radioButton}
-            name="option"
-            />
-            <RadioButton
-            value={this.state.op3}
-            label={this.state.op3}
-            style={styles.radioButton}
-            name="option"
-            />
-            <RadioButton
-            value={this.state.op4}
-            label={this.state.op4}
-            style={styles.radioButton}
-            name="option"
-            />
+                                        <RadioButton
+                                            value={this.state.op2}
+                                            label={this.state.op2}
+                                            style={styles.radioButton}
+                                            name="option"
+                                        />
+                                        <RadioButton
+                                            value={this.state.op3}
+                                            label={this.state.op3}
+                                            style={styles.radioButton}
+                                            name="option"
+                                        />
+                                        <RadioButton
+                                            value={this.state.op4}
+                                            label={this.state.op4}
+                                            style={styles.radioButton}
+                                            name="option"
+                                        />
 
-            </RadioButtonGroup>
+                                    </RadioButtonGroup>
 
+                                </div>
+                                <FloatingActionButton style={style} onClick={this.loadQuestion}>
+                                    <ContentAdd />
+                                </FloatingActionButton>
+                            </Paper>
+                        </center>
+
+                    </div>
+                </MuiThemeProvider>
             </div>
-            <FloatingActionButton style={style} onClick={this.loadQuestion}>
-            <ContentAdd />
-            </FloatingActionButton>
-            </Paper>
-            </center>
-
-            </div>
-            </MuiThemeProvider>
-            </div>
-            )
+        )
     }
 }

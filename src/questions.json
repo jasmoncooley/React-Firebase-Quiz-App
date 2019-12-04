@@ -1,5 +1,6 @@
 {
     "Questions":{
+        "Redirects": "0",
         "Movies":{
             "Quiz1":{
                 "Question1":{
@@ -8,7 +9,8 @@
                     "Answer2":"Put the car in park",
                     "Answer3":"His foot",
                     "Answer4":"A wreck",
-                    "Correct Answer":"His foot"
+                    "Correct Answer":"His foot",
+                    "VideoID":""
                 },
                 "Question2":{
                     "Question":"In 'Girl's Trip', who peed on the crowd on Bourbon Street? ",
