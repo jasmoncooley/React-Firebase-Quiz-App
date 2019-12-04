@@ -241,17 +241,17 @@ import React from 'react';
          // console.log(this.state.TotalTime);
          return (
 
-             <div>
-             <MuiThemeProvider>
              <div class= "verticalmenu">
+             <MuiThemeProvider>
+             <div >
              <center>
-             <Link to="/Movies"><RaisedButton>Movies</RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+             <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
 
-             <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 50}}>User Questions</span></RaisedButton></Link>
+             <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60}}>User Questions</span></RaisedButton></Link>
 
              {/* </div> */}
              {/* <FloatingActionButton style={stylee} onClick={this.loadQuestion}> */}
