@@ -10,6 +10,7 @@ import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 import ActionFavorite from 'material-ui/svg-icons/action/favorite';
 import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import data1 from '../questions.json';
+import YoutubePlayer from 'react-youtube-player';
 
 const style1 = {
     float: "right",
@@ -268,8 +269,20 @@ render() {
             <span style={style}>{this.state.timer}</span>
 
             <h4 style={style2}>{this.state.Question}</h4>
+            
             <br />
-            <br />
+            <br /><YoutubePlayer 
+                                videoId='48l92b0XxW4'
+                                playbackState='playing'
+
+                                configuration={
+                                    {
+
+                                        showinfo: 0,
+                                        controls: 0
+                                    }
+                                }
+                            />
             <div ref="val">
             <RadioButtonGroup name="shipSpeed" defaultSelected="not_light">
             <RadioButton
