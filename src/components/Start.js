@@ -36,12 +36,8 @@ class Start extends React.Component {
     }
 
      next(){
-        if(this.state.don === null){
             browserHistory.push('/Quizes')
-        }
-        else{
-            browserHistory.push('/AttemtQuiz')
-        }
+        
     
        }
 

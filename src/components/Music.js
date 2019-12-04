@@ -196,7 +196,7 @@ componentWillMount() {
         console.log(obj.Title)
         console.log(data1['Questions']['Music']['Quiz1']);
         this.setState({
-            Title: obj.Title,
+            Title: 'Music',
             Totalmarks: obj.Totalmarks,
             TotalQuestion: obj.TotalQuestion,
             TotalTime: obj.Totaltime
