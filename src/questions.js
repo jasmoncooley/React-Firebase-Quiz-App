@@ -1,16 +1,3 @@
-import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import * as firebase from "firebase";
-import { RaisedButton } from 'material-ui';
-import Paper from 'material-ui/Paper';
-import { browserHistory } from 'react-router';
-import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/action/done';
-import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
-import ActionFavorite from 'material-ui/svg-icons/action/favorite';
-import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
-import data1 from '../questions.json';
-import YoutubePlayer from 'react-youtube-player';
 {
     "Questions";{
         "Movies";{
