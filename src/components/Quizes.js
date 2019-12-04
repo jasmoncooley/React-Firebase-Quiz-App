@@ -181,7 +181,7 @@ import React from 'react';
  
      var don = [];
  
-    //  firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").on('value', (data) => {
+    //  firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes").on('value', (data) => {
     //      let obj = data.val();
     //          // console.log(obj);
     //          for (var prop in obj) {
