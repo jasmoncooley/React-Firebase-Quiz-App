@@ -241,25 +241,19 @@ import React from 'react';
          // console.log(this.state.TotalTime);
          return (
 
-             <div class= "verticalmenu">
+             <div>
                 <MuiThemeProvider>
                     <div >
                         <center>
-                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;
 
-                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;
 
-                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;&nbsp;
+                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Music</span></RaisedButton></Link>&nbsp;
 
-                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>User Questions</span></RaisedButton></Link>
-                       
-                                {/* </div> */}
-                {                   /* <FloatingActionButton style={stylee} onClick={this.loadQuestion}> */}
+                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 60, width: 45}}>User Questions</span></RaisedButton></Link>&nbsp;&nbsp;
                                         <ContentAdd /> 
-                                    {/* </FloatingActionButton> */}
-                            {/* </Paper> */}
                             </center>
- 
                         </div>
                 </MuiThemeProvider>
                 </div>
