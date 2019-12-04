@@ -245,13 +245,13 @@ import React from 'react';
                 <MuiThemeProvider>
                     <div >
                         <center>
-                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Movies</span></RaisedButton></Link>&nbsp;
+                            <Link to="/Movies"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, marginTop: 10, height: 25}}>Movies</span></RaisedButton></Link>&nbsp;&nbsp;
 
-                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Television</span></RaisedButton></Link>&nbsp;
+                            <Link to="/Television"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 52}}>Television</span></RaisedButton></Link>&nbsp;&nbsp;
 
-                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65, width: 45}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;
+                            <Link to="/Music"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 65}}>Music</span></RaisedButton></Link>&nbsp;&nbsp;
 
-                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 35, width: 45}}>User Questions</span></RaisedButton></Link>
+                            <Link to="/UserGenerated"><RaisedButton primary={false} backgroundColor='#FFFFFF' ><span style={{margin: 35}}>User Questions</span></RaisedButton></Link>
                                         <ContentAdd /> 
                             </center>
                         </div>
