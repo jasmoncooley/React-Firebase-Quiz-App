@@ -95,6 +95,11 @@ export default class Music extends React.Component {
             if (radios[i].checked) {
                 console.log(radios[i].value)
                 if (this.state.Ans === radios[i].value) {
+                    firebase.database().ref('UserInfo/'+firebase.auth().currentUser.uid+'/Quizzes/Score').on('value', (data) => {
+                        console.log(typeof data.val())
+                        this.state.score = parseInt(data.val())
+                    })
+                    console.log(typeof this.state.score);
                     this.state.score = this.state.score +5;
                     console.log(this.state.score);
                 }
@@ -105,11 +110,11 @@ export default class Music extends React.Component {
             }
 
         }
-        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score + "%")
+        firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score)
 
         setTimeout(() => {
             console.log(this.state.score);
-            firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score + "%")
+            // firebase.database().ref("UserInfo/"+firebase.auth().currentUser.uid+"/Quizzes/Score").set(this.state.score + "%")
 
         }, 500)
 
